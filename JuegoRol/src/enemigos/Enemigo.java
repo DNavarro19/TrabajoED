@@ -1,7 +1,9 @@
 package enemigos;
 
 public class Enemigo {
-	public Enemigo() {
-
+	private int vida;
+	
+	public Enemigo(int health) {
+		this.vida=health;
 	}
 }
