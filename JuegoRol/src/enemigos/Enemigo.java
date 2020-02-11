@@ -5,6 +5,6 @@ public class Enemigo {
 	private int daño;
 	public Enemigo(int health,int damage) {
 		this.vida=health;
-		this.daño=damage;
+		daño=damage;
 	}
 }
