@@ -4,11 +4,11 @@ import objetos.Objeto;
 
 public class Personaje {
 	private int constitucion;
-	private int vidaActual;
 	private int fuerza;
 	private int destreza;
 	private int defensa;
 	private int resistencia;
+	private int vidaActual;
 	private Objeto[] objetos = new Objeto[5];
 	private int priPosLib;
 
@@ -17,9 +17,8 @@ public class Personaje {
 		fuerza = fuer;
 		destreza = dest;
 		defensa = def;
-		destreza = dest;
+		resistencia = rest;
 		vidaActual = constitucion;
-
 	}
 
 	public void recibeDano(int ataque) {
@@ -27,8 +26,12 @@ public class Personaje {
 	}
 
 	public void equipaObjeto(Objeto item) {
-		objetos[priPosLib] = item;
-		priPosLib++;
+		if (priPosLib < objetos.length) {
+			objetos[priPosLib] = item;
+			priPosLib++;
+		} else {
+			System.out.println("Ya no puedes equiparte mas objetos");
+		}
 	}
 
 }

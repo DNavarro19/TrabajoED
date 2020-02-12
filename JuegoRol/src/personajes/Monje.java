@@ -4,7 +4,7 @@ public class Monje extends Personaje implements Ataque{
 
 	
 	public Monje() {
-		
+		super(50, 50, 50, 50, 50);
 	}
 	
 	public int realizaAtaque1() {
