@@ -1,6 +1,8 @@
 package personajes;
 
-public class Guerrero extends Personaje implements Ataque{
+import habilidades.Ataque;
+
+public class Guerrero extends Personaje{
 
 	public Guerrero() {
 		super(50, 50, 50, 50, 50);

@@ -1,6 +1,8 @@
 package personajes;
 
-public class Clerigo extends Personaje implements Ataque{
+import habilidades.Ataque;
+
+public class Clerigo extends Personaje{
 
 	public Clerigo() {
 		super(50, 50, 50, 50, 50);

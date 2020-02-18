@@ -1,6 +1,8 @@
 package personajes;
 
-public class Monje extends Personaje implements Ataque{
+import habilidades.Ataque;
+
+public class Monje extends Personaje{
 
 	
 	public Monje() {
