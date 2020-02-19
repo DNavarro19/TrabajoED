@@ -2,6 +2,7 @@ package enemigos;
 
 
 public class Enemigo {
+	protected String nombre;
 	private int constitucion;
 	private int fuerza;
 	private int destreza;
