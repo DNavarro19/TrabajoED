@@ -2,13 +2,11 @@ package habilidades;
 
 public class Estado extends Habilidad {
 
-	public Estado(boolean bloquea) {
-		super(bloquea);
+	public Estado() {
+
 	}
 
-	public Estado(int subeDefensa) {
-		super();
-		super.subeDefensa = subeDefensa;
+	public void setAturde(boolean aturde) {
+		super.aturde = aturde;
 	}
-
 }
