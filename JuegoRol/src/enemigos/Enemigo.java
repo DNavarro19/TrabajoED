@@ -22,4 +22,6 @@ public class Enemigo {
 	public void recibeDano(int ataque) {
 		vidaActual-=(ataque-ataque*defensa/100);
 	}
+	
+
 }
