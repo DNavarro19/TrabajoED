@@ -1,6 +1,6 @@
 package personajes;
 
-import habilidades.Ataque;
+import habilidades.Habilidad;
 
 public class Monje extends Personaje{
 

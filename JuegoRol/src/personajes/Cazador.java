@@ -1,10 +1,10 @@
 package personajes;
 
-import habilidades.Ataque;
+import habilidades.Habilidad;
 
 public class Cazador extends Personaje{
 
-	private habilidades.Ataque[]ataques;
+	private habilidades.Habilidad[]ataques;
 	public Cazador() {
 		super(50, 50, 50, 50, 50);
 	}
