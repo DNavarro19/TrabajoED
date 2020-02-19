@@ -1,12 +1,16 @@
 package habilidades;
 
 public class Habilidad {
-	private int dano;
-	private boolean aturde;
-	private int ignoraDefensa;
-	private int esquiva;
-	private int subeDefensa;
-	private boolean bloquea;
+	protected int dano;
+	protected boolean aturde;
+	protected int ignoraDefensa;
+	protected int esquiva;
+	protected int subeDefensa;
+	protected boolean bloquea;
+
+	public Habilidad() {
+
+	}
 
 	public Habilidad(int dano) {
 		this.dano = dano;
