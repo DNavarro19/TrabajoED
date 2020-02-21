@@ -28,13 +28,13 @@ public class Personaje {
 /**
  * 
  * @param item el objeto que usa el pesonajes
- * @param p el personaje que usa el onbjeto
+ * @param p el personaje que usa el objeto
  * @return equipa el objeto en un array o no lo equipa porque el array esta lleno
  * 
  */
 	public void equipaObjeto(String tipo,Personaje p) {
 		if (priPosLib < Objetos.length) {
-			Objeto obj=new Objeto();
+			Objeto obj=new Objeto(tipo);
 			obj.usaObjeto(tipo,p);
 			Objetos[priPosLib] = obj;
 			priPosLib++;

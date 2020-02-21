@@ -3,16 +3,9 @@ package objetos;
 import personajes.Personaje;
 
 public class Objeto  {
-	public static String[] tiposObjeto={"amuleto","anillo","collar"};
-	/*private int boost1;
-	private int boost2;
-	private int boost3;
-	private int bajada1;
-	private int bajada2;
-	private int bajada3;
-	*/
-	public Objeto() {
-		
+	private String tipo;
+	public Objeto(String tipo) {
+		this.tipo=tipo;
 	}
 	/**
 	 * 
@@ -32,6 +25,10 @@ public class Objeto  {
 		default:
 			break;
 		}
+	}
+	//metodo que 
+	public void muestraObjeto() {
+		System.out.println(this.tipo);
 	}
 	
 }
