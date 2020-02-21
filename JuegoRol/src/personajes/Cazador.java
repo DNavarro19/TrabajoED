@@ -4,7 +4,7 @@ import habilidades.Habilidad;
 
 public class Cazador extends Personaje{
 
-	private habilidades.Habilidad[]ataques;
+	private habilidades.Habilidad[] ataques;
 	public Cazador() {
 		super(50, 50, 50, 50, 50);
 	}
