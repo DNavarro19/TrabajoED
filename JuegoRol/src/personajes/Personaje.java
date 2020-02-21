@@ -2,6 +2,7 @@ package personajes;
 
 import objetos.Objeto;
 
+
 public class Personaje {
 	private int constitucion;
 	private int fuerza;
@@ -9,7 +10,7 @@ public class Personaje {
 	private int defensa;
 	private int resistencia;
 	private int vidaActual;
-	private Objeto[] objetos = new Objeto[5];
+	private Objeto[] Objetos = new Objeto[5];
 	private int priPosLib;
 
 	public Personaje(int cons, int fuer, int dest, int def, int rest) {
@@ -24,14 +25,29 @@ public class Personaje {
 	public void recibeDano(int ataque) {
 		vidaActual -= (ataque - ataque * defensa / 100);
 	}
-
-	public void equipaObjeto(Objeto item) {
-		if (priPosLib < objetos.length) {
-			objetos[priPosLib] = item;
+/**
+ * 
+ * @param item el objeto que usa el pesonajes
+ * @param p el personaje que usa el onbjeto
+ * @return equipa el objeto en un array o no lo equipa porque el array esta lleno
+ * 
+ */
+	public void equipaObjeto(String tipo,Personaje p) {
+		if (priPosLib < Objetos.length) {
+			Objeto obj=new Objeto();
+			obj.usaObjeto(tipo,p);
+			Objetos[priPosLib] = obj;
 			priPosLib++;
 		} else {
 			System.out.println("Ya no puedes equiparte mas objetos");
 		}
+	}
+	/**
+	 * 
+	 * @param cantidad la cantidad nueva de constitucion
+	 */
+	public void setCostitucion(int cantidad) {
+		this.constitucion=cantidad;
 	}
 
 }
