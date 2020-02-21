@@ -43,5 +43,5 @@ public class Objeto  {
 		System.out.println("Collar:\n>aumenta el atributo en X puntos.\n>disminuye el atributo en X puntos");
 		System.out.println("Anillo:\n>aumenta el atributo en X puntos.\n>disminuye el atributo en X puntos");
 	}
-	
+	 
 }
