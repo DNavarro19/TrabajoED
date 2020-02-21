@@ -2,6 +2,7 @@ package habilidades;
 
 public class Habilidad {
 	protected int dano;
+	protected int cura;
 	protected boolean aturde;
 	protected int ignoraDefensa;
 	protected int esquiva;
