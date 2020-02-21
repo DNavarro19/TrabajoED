@@ -21,16 +21,25 @@ public class Personaje {
 		vidaActual = constitucion;
 	}
 
+	/**
+	 * Este metodo indica la cantidad numerica que va a restarse a la vida actual del personaje
+	 * @param ataque cantidad de dno que va a recibir
+	 * 
+	 */
 	public void recibeDano(int ataque) {
 		vidaActual -= (ataque - ataque * defensa / 100);
 	}
 
 	/**
+	 * <ul>
+	 * <li>equipa el objeto en un array</li>
+	 * <li>no lo equipa porque el array esta lleno</li>
+	 * </ul>
 	 * 
-	 * @param item el objeto que usa el pesonajes
+	 * @param tipo el objeto que usa el personaje
 	 * @param p    el personaje que usa el objeto
-	 * @return equipa el objeto en un array o no lo equipa porque el array esta
-	 *         lleno
+	 * 
+	 * 
 	 * 
 	 */
 	public void equipaObjeto(String tipo, Personaje p) {
@@ -46,41 +55,45 @@ public class Personaje {
 
 	/**
 	 * 
-	 * @param cantidad la cantidad de constitucion a añadir
+	 * @param cantidad la cantidad de constitucion a aï¿½adir
 	 */
 	public void setCostitucion(int cantidad) {
 		this.constitucion += cantidad;
 	}
+
 	/**
 	 * 
-	 * @param fuerza la cantidad de fuerza a añadir
+	 * @param fuerza la cantidad de fuerza a aï¿½adir
 	 */
 
 	public void setFuerza(int fuerza) {
 		this.fuerza += fuerza;
 	}
+
 	/**
 	 * 
-	 * @param destreza la cantidad de destreza a añadir
+	 * @param destreza la cantidad de destreza a aï¿½adir
 	 */
 
 	public void setDestreza(int destreza) {
 		this.destreza += destreza;
 	}
+
 	/**
 	 * 
-	 * @param defensa la cantidad de defensa a añadir
+	 * @param defensa la cantidad de defensa a aï¿½adir
 	 */
 	public void setDefensa(int defensa) {
 		this.defensa += defensa;
 	}
+
 	/**
 	 * 
-	 * @param resistencia la cantidad de resistencia a añadir
+	 * @param resistencia la cantidad de resistencia a aï¿½adir
 	 */
 
 	public void setResistencia(int resistencia) {
 		this.resistencia += resistencia;
 	}
- 
+
 }
