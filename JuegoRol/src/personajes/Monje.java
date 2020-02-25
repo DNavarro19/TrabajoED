@@ -1,7 +1,7 @@
 package personajes;
 
 import enemigos.Enemigo;
-import habilidades.Habilidad;
+
 
 public class Monje extends Personaje {
 

@@ -1,6 +1,6 @@
 package personajes;
 
-import habilidades.Habilidad;
+
 
 public class Guerrero extends Personaje{
 
