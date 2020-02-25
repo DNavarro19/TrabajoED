@@ -30,6 +30,38 @@ public class Personaje {
 		vidaActual -= (ataque - ataque * defensa / 100);
 	}
 
+	public int getConstitucion() {
+		return constitucion;
+	}
+
+	public int getFuerza() {
+		return fuerza;
+	}
+
+	public int getDestreza() {
+		return destreza;
+	}
+
+	public int getDefensa() {
+		return defensa;
+	}
+
+	public int getResistencia() {
+		return resistencia;
+	}
+
+	public int getVidaActual() {
+		return vidaActual;
+	}
+
+	public Objeto[] getObjetos() {
+		return Objetos;
+	}
+
+	public int getPriPosLib() {
+		return priPosLib;
+	}
+
 	/**
 	 * <ul>
 	 * <li>equipa el objeto en un array</li>
@@ -55,7 +87,7 @@ public class Personaje {
 
 	/**
 	 * 
-	 * @param cantidad la cantidad de constitucion a a�adir
+	 * @param cantidad la cantidad de constitucion a anadir
 	 */
 	public void setCostitucion(int cantidad) {
 		this.constitucion += cantidad;
@@ -63,7 +95,7 @@ public class Personaje {
 
 	/**
 	 * 
-	 * @param fuerza la cantidad de fuerza a a�adir
+	 * @param fuerza la cantidad de fuerza a anadir
 	 */
 
 	public void setFuerza(int fuerza) {
@@ -72,7 +104,7 @@ public class Personaje {
 
 	/**
 	 * 
-	 * @param destreza la cantidad de destreza a a�adir
+	 * @param destreza la cantidad de destreza a anadir
 	 */
 
 	public void setDestreza(int destreza) {
@@ -81,7 +113,7 @@ public class Personaje {
 
 	/**
 	 * 
-	 * @param defensa la cantidad de defensa a a�adir
+	 * @param defensa la cantidad de defensa a anadir
 	 */
 	public void setDefensa(int defensa) {
 		this.defensa += defensa;
@@ -89,7 +121,7 @@ public class Personaje {
 
 	/**
 	 * 
-	 * @param resistencia la cantidad de resistencia a a�adir
+	 * @param resistencia la cantidad de resistencia a anadir
 	 */
 
 	public void setResistencia(int resistencia) {

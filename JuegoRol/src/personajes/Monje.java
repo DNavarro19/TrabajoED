@@ -1,35 +1,28 @@
 package personajes;
 
+import enemigos.Enemigo;
 import habilidades.Habilidad;
 
-public class Monje extends Personaje{
+public class Monje extends Personaje {
 
-	
 	public Monje() {
 		super(50, 50, 50, 50, 50);
 	}
-	
-	public int realizaAtaque1() {
 
-		return 0;
+	public void realizaHabilidad1(Enemigo ene) {
+		ene.recibeDano(getFuerza());
 	}
 
-	
-	public int realizaAtaque2() {
-
-		return 0;
+	public void realizaHabilidad2(Enemigo ene) {
+		ene.recibeDano(getFuerza());
 	}
 
-	
-	public int realizaAtaque3() {
-
-		return 0;
+	public void realizaHabilidad3(Enemigo ene) {
+		ene.recibeDano(getFuerza());
 	}
 
-	
-	public int realizaAtaque4() {
-
-		return 0;
+	public void realizaHabilidad4(Enemigo ene) {
+		ene.recibeDano(getFuerza());
 	}
 
 }
