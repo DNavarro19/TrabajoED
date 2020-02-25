@@ -1,4 +1,7 @@
 package enemigos;
+
+import personajes.Personaje;
+
 /**
  * Clase enemigo, sera a lo que se enfrentaran los personajes en un combate
  * 
@@ -10,12 +13,12 @@ package enemigos;
 
 public class Enemigo {
 	protected String nombre;
-	private int constitucion;
-	private int fuerza;
-	private int destreza;
-	private int defensa;
-	private int resistencia;
-	private int vidaActual;
+	protected int constitucion;
+	protected int fuerza;
+	protected int destreza;
+	protected int defensa;
+	protected int resistencia;
+	protected int vidaActual;
 	
 	/**
 	 * Metodo constructor
@@ -44,5 +47,14 @@ public class Enemigo {
 		vidaActual-=(ataque-ataque*defensa/100);
 	}
 	
-
+	/**
+	 * Metodo de ataque basico que tendran todos los enemigos ademas de uno extra
+	 * 
+	 * @param p se refiere al personaje elegido
+	 */
+	
+	public void ataqueBasico(Personaje p) {
+		int dano=50+50*fuerza/100;
+		p.recibeDano(dano);
+	}
 }
