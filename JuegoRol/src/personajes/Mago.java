@@ -1,26 +1,29 @@
 package personajes;
 
+import enemigos.Enemigo;
 
-
-public class Mago extends Personaje{
+public class Mago extends Personaje {
+	private String[] habilidades = { "Hechizo", "Bola de fuego", "Nova", "Rafaga Arcana" };
 
 	public Mago() {
 		super(50, 50, 50, 50, 50);
 	}
 
-	public int realizaAtaque1() {
-		return 0;
+	public void hechizo(Enemigo ene) {
+		int dano = 50 + 50 * fuerza / 100;
+		ene.recibeDano(dano);
 	}
 
-	public int realizaAtaque2() {
-		return 0;
+	public void bolaFuego(Enemigo ene) {
+		ene.recibeDano(getFuerza());
 	}
 
-	public int realizaAtaque3() {
-		return 0;
+	public void nova(Enemigo ene) {
+		ene.recibeDano(getFuerza());
 	}
 
-	public int realizaAtaque4() {
-		return 0;
+	public void rafagaArcana(Enemigo ene) {
+		ene.recibeDano(getFuerza());
 	}
+
 }

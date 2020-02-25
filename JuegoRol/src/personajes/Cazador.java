@@ -1,24 +1,29 @@
 package personajes;
 
-public class Cazador extends Personaje{
+import enemigos.Enemigo;
+
+public class Cazador extends Personaje {
+	private String[] habilidades = { "Disparo con arco", "Puñalada", "Esquivar", "Disparo multiple" };
 
 	public Cazador() {
 		super(50, 50, 50, 50, 50);
 	}
 
-	public int realizaAtaque1() {
-		return 0;
+	public void disparoArco(Enemigo ene) {
+		int dano = 50 + 50 * fuerza / 100;
+		ene.recibeDano(dano);
 	}
 
-	public int realizaAtaque2() {
-		return 0;
+	public void puñalada(Enemigo ene) {
+		ene.recibeDano(getFuerza());
 	}
 
-	public int realizaAtaque3() {
-		return 0;
+	public void esquivar(Enemigo ene) {
+		ene.recibeDano(getFuerza());
 	}
 
-	public int realizaAtaque4() {
-		return 0;
+	public void disparoMultiple(Enemigo ene) {
+		ene.recibeDano(getFuerza());
 	}
+
 }

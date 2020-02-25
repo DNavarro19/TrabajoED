@@ -1,26 +1,29 @@
 package personajes;
 
+import enemigos.Enemigo;
 
-
-public class Guerrero extends Personaje{
+public class Guerrero extends Personaje {
+	private String[] habilidades = { "Espadazo", "Estocada", "Alzar Escudo", "Carga" };
 
 	public Guerrero() {
 		super(50, 50, 50, 50, 50);
 	}
 
-	public int realizaAtaque1() {
-		return 0;
+	public void espadazo(Enemigo ene) {
+		int dano = 50 + 50 * fuerza / 100;
+		ene.recibeDano(dano);
 	}
 
-	public int realizaAtaque2() {
-		return 0;
+	public void estocada(Enemigo ene) {
+		ene.recibeDano(getFuerza());
 	}
 
-	public int realizaAtaque3() {
-		return 0;
+	public void alzarEscudo(Enemigo ene) {
+		ene.recibeDano(getFuerza());
 	}
 
-	public int realizaAtaque4() {
-		return 0;
+	public void carga(Enemigo ene) {
+		ene.recibeDano(getFuerza());
 	}
+
 }

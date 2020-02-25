@@ -3,14 +3,16 @@ package personajes;
 import objetos.Objeto;
 
 public class Personaje {
-	private int constitucion;
-	private int fuerza;
-	private int destreza;
-	private int defensa;
-	private int resistencia;
-	private int vidaActual;
-	private Objeto[] Objetos = new Objeto[5];
-	private int priPosLib;
+	protected int constitucion;
+	protected int fuerza;
+	protected int destreza;
+	protected int defensa;
+	protected int resistencia;
+	protected int vidaActual;
+	protected Objeto[] Objetos = new Objeto[5];
+	protected int priPosLib;
+	protected int fuerzaExtra;
+	protected int defensaExtra;
 
 	public Personaje(int cons, int fuer, int dest, int def, int rest) {
 		constitucion = cons;
@@ -22,7 +24,9 @@ public class Personaje {
 	}
 
 	/**
-	 * Este metodo indica la cantidad numerica que va a restarse a la vida actual del personaje
+	 * Este metodo indica la cantidad numerica que va a restarse a la vida actual
+	 * del personaje
+	 * 
 	 * @param ataque cantidad de dno que va a recibir
 	 * 
 	 */
