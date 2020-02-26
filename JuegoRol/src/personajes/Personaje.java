@@ -14,7 +14,7 @@ public class Personaje {
 	protected int defensaExtra;
 	protected boolean aturdido;
 	protected boolean esquiva;
-	protected Objeto[] Objetos = new Objeto[5];
+	protected Objeto[] objetos = new Objeto[5];
 	protected int priPosLib;
 
 	public Personaje(int cons, int fuer, int dest, int def, int rest) {
@@ -71,7 +71,7 @@ public class Personaje {
 	}
 
 	public Objeto[] getObjetos() {
-		return Objetos;
+		return objetos;
 	}
 
 	public int getPriPosLib() {
@@ -90,14 +90,41 @@ public class Personaje {
 	 * 
 	 * 
 	 */
-	public void equipaObjeto(String tipo, Personaje p) {
-		if (priPosLib < Objetos.length) {
-			Objeto obj = new Objeto(tipo);
-			obj.usaObjeto(tipo, p);
-			Objetos[priPosLib] = obj;
+	public void equipaObjeto(Objeto obj, Personaje p) {
+		if (priPosLib < objetos.length) {
+			usaObjeto(obj);
+			objetos[priPosLib] = obj;
 			priPosLib++;
 		} else {
 			System.out.println("Ya no puedes equiparte mas objetos");
+		}
+	}
+
+	/**
+	 * metodo que modifica los atributos del personaje segun el objeto a utilizar
+	 * 
+	 * @param tipos el tipo de objeto que se quiere usar
+	 * @param p     El personaje al que se le aplica el objeto
+	 */
+	public void usaObjeto(Objeto obj) {
+		switch (obj.getCaracteristica()) {
+		case "constitucion":
+			constitucion += obj.getPuntos();
+			break;
+		case "defensa":
+			defensa += obj.getPuntos();
+			break;
+		case "destreza":
+			destreza += obj.getPuntos();
+			break;
+		case "fuerza":
+			fuerza += obj.getPuntos();
+			break;
+		case "resistencia":
+			resistencia += obj.getPuntos();
+			break;
+		default:
+			break;
 		}
 	}
 

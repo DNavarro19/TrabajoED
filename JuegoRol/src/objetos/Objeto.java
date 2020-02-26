@@ -4,30 +4,21 @@ import personajes.Personaje;
 
 public class Objeto {
 	private String tipo;
+	private String caracteristica;
+	private int puntos;
 
-	public Objeto(String tipo) {
+	public Objeto(String tipo, String caract) {
 		this.tipo = tipo;
-	}
-
-	/**
-	 * metodo que modifica los atributos del personaje segun el objeto a utilizar
-	 * 
-	 * @param tipos el tipo de objeto que se quiere usar
-	 * @param p     El personaje al que se le aplica el objeto
-	 */
-	public void usaObjeto(String tipos, Personaje p) {
-		switch (tipos) {
+		this.caracteristica = caract;
+		switch (tipo) {
 		case "amuleto":
-			p.setConstitucion(70);
-			// anadir la cantidad deseada al atributo deseado
+			puntos = 70;
 			break;
 		case "anillo":
-			p.setConstitucion(40);
-			// anadir la cantidad deseada al atributo deseado
+			puntos = 40;
 			break;
 		case "collar":
-			p.setConstitucion(14);
-			// anadir la cantidad deseada al atributo deseado
+			puntos = 20;
 		default:
 			break;
 		}
@@ -38,6 +29,14 @@ public class Objeto {
 	 */
 	public void muestraObjeto() {
 		System.out.println(this.tipo);
+	}
+
+	public int getPuntos() {
+		return puntos;
+	}
+
+	public String getCaracteristica() {
+		return caracteristica;
 	}
 
 	/**
