@@ -10,20 +10,24 @@ public class Clerigo extends Personaje {
 	}
 
 	public void ataqueBaston(Enemigo ene) {
-		int dano = 50 + 50 * fuerza / 100;
+		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
 		ene.recibeDano(dano);
 	}
 
-	public void olaSanacion() {
-
+	public void olaSanacion(Personaje[] p) {
+		int cura = 25 + 25 * (fuerza + fuerzaExtra) / 100;
+		for (int i = 0; i < p.length; i++) {
+			p[i].recibeVida(cura);
+		}
 	}
 
 	public void manoBendita(Personaje p) {
 		p.fuerzaExtra = 25;
 	}
 
-	public void curaMayor(Enemigo ene) {
-		ene.recibeDano(getFuerza());
+	public void curaMayor(Personaje p) {
+		int cura = 50 + 50 * (fuerza + fuerzaExtra) / 100;
+		p.recibeVida(cura);
 	}
 
 }

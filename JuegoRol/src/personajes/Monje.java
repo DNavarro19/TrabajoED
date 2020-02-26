@@ -10,7 +10,7 @@ public class Monje extends Personaje {
 	}
 
 	public void golpeVara(Enemigo ene) {
-		int dano = 50 + 50 * fuerza / 100;
+		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
 		ene.recibeDano(dano);
 	}
 
@@ -18,12 +18,14 @@ public class Monje extends Personaje {
 
 	}
 
-	public void comboKen(Enemigo ene) {
-		ene.recibeDano(getFuerza());
+	public void comboKen(Enemigo ene, Enemigo ene2) {
+		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
+		ene.recibeDano(dano);
+		ene2.recibeDano(dano);
 	}
 
 	public void cabezazo(Enemigo ene) {
-		ene.recibeDano(getFuerza());
+		ene.
 	}
 
 }

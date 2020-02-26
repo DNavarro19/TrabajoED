@@ -8,11 +8,14 @@ public class Personaje {
 	protected int destreza;
 	protected int defensa;
 	protected int resistencia;
+	protected int resistenciaActual;
 	protected int vidaActual;
-	protected Objeto[] Objetos = new Objeto[5];
-	protected int priPosLib;
 	protected int fuerzaExtra;
 	protected int defensaExtra;
+	protected boolean aturdido;
+	protected boolean esquiva;
+	protected Objeto[] Objetos = new Objeto[5];
+	protected int priPosLib;
 
 	public Personaje(int cons, int fuer, int dest, int def, int rest) {
 		constitucion = cons;
@@ -21,6 +24,11 @@ public class Personaje {
 		defensa = def;
 		resistencia = rest;
 		vidaActual = constitucion;
+		resistenciaActual = resistencia;
+		defensaExtra = 0;
+		fuerzaExtra = 0;
+		aturdido = false;
+		esquiva = false;
 	}
 
 	/**
@@ -31,7 +39,11 @@ public class Personaje {
 	 * 
 	 */
 	public void recibeDano(int ataque) {
-		vidaActual -= (ataque - ataque * defensa / 100);
+		vidaActual -= (ataque - ataque * (defensa + defensaExtra) / 100);
+	}
+
+	public void recibeVida(int cura) {
+		vidaActual += cura;
 	}
 
 	public int getConstitucion() {
@@ -93,8 +105,16 @@ public class Personaje {
 	 * 
 	 * @param cantidad la cantidad de constitucion a anadir
 	 */
-	public void setCostitucion(int cantidad) {
+	public void setConstitucion(int cantidad) {
 		this.constitucion += cantidad;
+	}
+
+	public void setAturdido(boolean aturdido) {
+		this.aturdido = aturdido;
+	}
+
+	public void setEsquiva(boolean esquiva) {
+		this.esquiva = esquiva;
 	}
 
 	/**
