@@ -31,6 +31,7 @@ public class Jabali extends Enemigo{
 	public void ataqueJabali(Personaje p, Personaje p2) {
 		super.ataqueBasico(p);
 		super.ataqueBasico(p2);
+		super.resistenciaActual-=80;
 	}
 
 }

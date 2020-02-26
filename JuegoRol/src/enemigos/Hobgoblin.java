@@ -23,7 +23,11 @@ public class Hobgoblin extends Enemigo{
 		super.nombre="Hobgoblin";
 		}
 	
-	public void ataqueHobgoblin(Personaje p) {
-		
+	/**
+	 * habilidad propia del hobgoblin en la que sube su ataque
+	 * 
+	 */
+	public void ataqueHobgoblin() {
+		super.fuerzaExtra=20;
 	}
 }

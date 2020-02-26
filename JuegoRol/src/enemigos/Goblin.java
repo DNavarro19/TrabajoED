@@ -1,5 +1,7 @@
 package enemigos;
 
+import personajes.Personaje;
+
 /**
  * Clase Goblin, enemigo del piso 2
  * 
@@ -21,4 +23,11 @@ public class Goblin extends Enemigo{
 		super.nombre="Goblin";
 		}
 
+	public void ataqueGoblin(Personaje [] pjs) {
+		
+		for (int i = 0; i < pjs.length; i++) {
+			super.ataqueBasico(pjs[i]);
+			
+		}
+	}
 }

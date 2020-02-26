@@ -18,7 +18,11 @@ public class Enemigo {
 	protected int destreza;
 	protected int defensa;
 	protected int resistencia;
+	protected int resistenciaActual;
 	protected int vidaActual;
+	protected int fuerzaExtra;
+	protected int defensaExtra;
+	protected boolean aturdido;
 	
 	/**
 	 * Metodo constructor
@@ -34,7 +38,11 @@ public class Enemigo {
 		destreza = dest;
 		defensa = def;
 		resistencia = res;
+		resistenciaActual=resistencia;
 		vidaActual = constitucion;
+		fuerzaExtra=0;
+		defensaExtra=0;
+		aturdido=false;
 	}
 	/**
 	 * Este metodo indica la cantidad numerica que va a restarse a la vida actual del enemigo
@@ -44,7 +52,7 @@ public class Enemigo {
 	 */
 	
 	public void recibeDano(int ataque) {
-		vidaActual-=(ataque-ataque*defensa/100);
+		vidaActual-=(ataque-ataque*(defensa+defensaExtra)/100);
 	}
 	
 	/**
@@ -54,7 +62,24 @@ public class Enemigo {
 	 */
 	
 	public void ataqueBasico(Personaje p) {
-		int dano=50+50*fuerza/100;
+		int dano=50+50*(fuerza+fuerzaExtra)/100;
 		p.recibeDano(dano);
+	}
+	
+	/**
+	 * Metodo que resetea los bonus a las caracteristicas cada turno
+	 */
+	public void reset() {
+		fuerzaExtra=0;
+		defensaExtra=0;
+		resistenciaActual=resistencia;
+	}
+	
+	public boolean getAturdido() {
+		return aturdido;
+	}
+	
+	public void setAturdido(boolean aturdido) {
+		this.aturdido=aturdido;
 	}
 }
