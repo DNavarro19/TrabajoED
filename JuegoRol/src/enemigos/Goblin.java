@@ -18,16 +18,17 @@ public class Goblin extends Enemigo{
 	 * @param def valor que reduce la cantidad de dano recibido
 	 * @param res valor que define la cantidad de habilidades posibles a usar
 	 */
-	public Goblin(int cons, int fuer, int dest, int def, int rest) {
-		super(cons, fuer, dest, def, rest);
+	public Goblin(int cons, int fuer, int dest, int def) {
+		super(cons, fuer, dest, def);
 		super.nombre="Goblin";
 		}
-
+	/**
+	 * Metodo de ataque del goblin en el que hace dano a todos los personajes
+	 * @param pjs el array de todos los personajes a los que va a atacar
+	 */
 	public void ataqueGoblin(Personaje [] pjs) {
-		
 		for (int i = 0; i < pjs.length; i++) {
-			super.ataqueBasico(pjs[i]);
-			
+			super.ataqueBasico(pjs[i]);	
 		}
 	}
 }

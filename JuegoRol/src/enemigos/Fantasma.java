@@ -1,5 +1,7 @@
 package enemigos;
 
+import personajes.Personaje;
+
 /**
  * Clase Fantasma, enemigo del piso 3
  * 
@@ -16,9 +18,19 @@ public class Fantasma extends Enemigo{
 	 * @param def valor que reduce la cantidad de dano recibido
 	 * @param res valor que define la cantidad de habilidades posibles a usar
 	 */
-	public Fantasma(int cons, int fuer, int dest, int def, int rest) {
-		super(cons, fuer, dest, def, rest);
+	public Fantasma(int cons, int fuer, int dest, int def) {
+		super(cons, fuer, dest, def);
 		super.nombre="Fantasma";
+	}
+	/**
+	 * Metodo de ataque del fantasma en el que hace dano a todos los personajes
+	 * @param pjs el array de todos los personajes a los que va a atacar
+	 */
+	public void ataqueFantasma(Personaje [] pjs) {
+		int dano = 60+60*(fuerza + fuerzaExtra)/100;
+		for (int i = 0; i < pjs.length; i++) {
+			pjs[i].recibeDano(dano);
+		}
 	}
 
 }

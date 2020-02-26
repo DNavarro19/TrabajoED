@@ -1,5 +1,7 @@
 package enemigos;
 
+import personajes.Personaje;
+
 /**
  * Clase Sectario, enemigo del piso 4
  * 
@@ -16,9 +18,15 @@ public class Sectario extends Enemigo{
 	 * @param res valor que define la cantidad de habilidades posibles a usar
 	 */
 
-	public Sectario(int cons, int fuer, int dest, int def, int rest) {
-		super(cons, fuer, dest, def, rest);
+	public Sectario(int cons, int fuer, int dest, int def) {
+		super(cons, fuer, dest, def);
 		super.nombre="Sectario";
 		}
 
+	public void ataqueSectario(Enemigo[] en) {
+		int cura = 50 + 50 * (fuerza + fuerzaExtra) / 100;
+		for (int i = 0; i < en.length; i++) {
+			en[i].recibeVida(cura);
+		}
+	}
 }

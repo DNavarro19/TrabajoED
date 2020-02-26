@@ -16,8 +16,8 @@ public class Oveja extends Enemigo{
 	 * @param def valor que reduce la cantidad de dano recibido
 	 * @param res valor que define la cantidad de habilidades posibles a usar
 	 */
-	public Oveja(int cons, int fuer, int dest, int def, int rest) {
-		super(cons, fuer, dest, def, rest);
+	public Oveja(int cons, int fuer, int dest, int def) {
+		super(cons, fuer, dest, def);
 		super.nombre="Oveja";
 		}
 	
@@ -26,7 +26,7 @@ public class Oveja extends Enemigo{
 	 * @param en el enemigo al que va a curar
 	 */
 	public void ataqueOveja(Enemigo en) {
-		
+		en.recibeVida(60);
 	}
 
 }

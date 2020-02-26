@@ -17,8 +17,6 @@ public class Enemigo {
 	protected int fuerza;
 	protected int destreza;
 	protected int defensa;
-	protected int resistencia;
-	protected int resistenciaActual;
 	protected int vidaActual;
 	protected int fuerzaExtra;
 	protected int defensaExtra;
@@ -30,15 +28,12 @@ public class Enemigo {
 	 * @param fuer valor que se utiliza como bonus al dano
 	 * @param dest valor que define el turno 
 	 * @param def valor que reduce la cantidad de dano recibido
-	 * @param res valor que define la cantidad de habilidades posibles a usar
 	 */
-	public Enemigo(int cons, int fuer, int dest, int def, int res) {
+	public Enemigo(int cons, int fuer, int dest, int def) {
 		constitucion = cons;
 		fuerza = fuer;
 		destreza = dest;
 		defensa = def;
-		resistencia = res;
-		resistenciaActual=resistencia;
 		vidaActual = constitucion;
 		fuerzaExtra=0;
 		defensaExtra=0;
@@ -67,18 +62,28 @@ public class Enemigo {
 	}
 	
 	/**
+	 * Metodo que permite curar a un enemigo teniendo en cuenta que no puede superar la vida base
+	 * @param cura cantidad que va a ser curado
+	 */
+	public void recibeVida(int cura) {
+		vidaActual += cura;
+		if (vidaActual>constitucion) {
+			vidaActual=constitucion;
+		}
+	}
+	
+	/**
 	 * Metodo que resetea los bonus a las caracteristicas cada turno
 	 */
 	public void reset() {
 		fuerzaExtra=0;
 		defensaExtra=0;
-		resistenciaActual=resistencia;
 	}
 	
-	public boolean getAturdido() {
-		return aturdido;
-	}
-	
+	/**
+	 * Metodo que permite aturdir a un enemigo
+	 * @param aturdido parametro en el que se establecera el boolean aturdido
+	 */
 	public void setAturdido(boolean aturdido) {
 		this.aturdido=aturdido;
 	}

@@ -16,9 +16,16 @@ public class Humano extends Enemigo{
 	 * @param def valor que reduce la cantidad de dano recibido
 	 * @param res valor que define la cantidad de habilidades posibles a usar
 	 */
-	public Humano(int cons, int fuer, int dest, int def, int rest) {
-		super(cons, fuer, dest, def, rest);
+	public Humano(int cons, int fuer, int dest, int def) {
+		super(cons, fuer, dest, def);
 		super.nombre="Humano";
 		}
 
+	/**
+	 * Habilidad del humano en la que cura a un enemigo
+	 * @param en el enemigo al que va a curar
+	 */
+	public void ataqueHumano(Enemigo en) {
+		en.recibeVida(80);
+	}
 }

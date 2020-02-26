@@ -6,7 +6,7 @@ package enemigos;
  * @author Ivan
  * 
  */
-public class Gerente extends Enemigo{
+public class JefeProyecto extends Enemigo{
 
 	/**
 	 * Metodo constructor, en el que se le anade el nombre
@@ -16,8 +16,17 @@ public class Gerente extends Enemigo{
 	 * @param def valor que reduce la cantidad de dano recibido
 	 * @param res valor que define la cantidad de habilidades posibles a usar
 	 */
-	public Gerente(int cons, int fuer, int dest, int def, int rest) {
-		super(cons, fuer, dest, def, rest);
+	public JefeProyecto(int cons, int fuer, int dest, int def, int res) {
+		super(cons, fuer, dest, def);
 		super.nombre="Gerente";	}
 
+	/**
+	 * Metodo en el que el jefe de proyecto aumenta la fuerza de todos sus compañeros y el mismo
+	 * @param en
+	 */
+	public void ataqueJefe(Enemigo [] en) {
+		for (int i = 0; i < en.length; i++) {
+			en[i].fuerzaExtra+=25;
+		}
+	}
 }

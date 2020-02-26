@@ -1,5 +1,7 @@
 package enemigos;
 
+import personajes.Personaje;
+
 /**
  * Clase Esqueleto, enemigo del piso 3
  * 
@@ -17,10 +19,19 @@ public class Esqueleto extends Enemigo{
 	 * @param def valor que reduce la cantidad de dano recibido
 	 * @param res valor que define la cantidad de habilidades posibles a usar
 	 */
-	public Esqueleto(int cons, int fuer, int dest, int def, int rest) {
-		super(cons, fuer, dest, def, rest);
+	public Esqueleto(int cons, int fuer, int dest, int def) {
+		super(cons, fuer, dest, def);
 		// TODO Auto-generated constructor stub
 		super.nombre="Esqueleto";
+	}
+	/**
+	 * Metodo en el que el esqueleto ataca y aturde a un personaje
+	 * @param p el personaje target
+	 */
+	public void ataqueEsqueleto(Personaje p) {
+		p.setAturdido(true);
+		int dano = 60+60*(fuerza + fuerzaExtra)/200;
+		p.recibeDano(dano);
 	}
 
 }

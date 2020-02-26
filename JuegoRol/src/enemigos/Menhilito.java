@@ -16,9 +16,14 @@ public class Menhilito extends Enemigo{
 	 * @param def valor que reduce la cantidad de dano recibido
 	 * @param res valor que define la cantidad de habilidades posibles a usar
 	 */
-	public Menhilito(int cons, int fuer, int dest, int def, int rest) {
-		super(cons, fuer, dest, def, rest);
+	public Menhilito(int cons, int fuer, int dest, int def) {
+		super(cons, fuer, dest, def);
 		super.nombre="Menhilito";
 		}
-
+	/**
+	 * Metodo en el que el menhilito va a aumentar su defensa
+	 */
+	public void ataqueMenhilito() {
+		super.defensaExtra+=50;
+	}
 }

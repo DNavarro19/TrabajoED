@@ -18,8 +18,8 @@ public class Jabali extends Enemigo{
 	 * @param def valor que reduce la cantidad de dano recibido
 	 * @param res valor que define la cantidad de habilidades posibles a usar
 	 */
-	public Jabali(int cons, int fuer, int dest, int def, int rest) {
-		super(cons, fuer, dest, def, rest);
+	public Jabali(int cons, int fuer, int dest, int def) {
+		super(cons, fuer, dest, def);
 		super.nombre="Jabali";
 		}
 	
@@ -31,7 +31,6 @@ public class Jabali extends Enemigo{
 	public void ataqueJabali(Personaje p, Personaje p2) {
 		super.ataqueBasico(p);
 		super.ataqueBasico(p2);
-		super.resistenciaActual-=80;
 	}
 
 }

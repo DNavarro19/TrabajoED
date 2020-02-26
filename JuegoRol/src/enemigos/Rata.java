@@ -18,8 +18,8 @@ public class Rata extends Enemigo{
 	 * @param def valor que reduce la cantidad de dano recibido
 	 * @param res valor que define la cantidad de habilidades posibles a usar
 	 */
-	public Rata(int cons, int fuer, int dest, int def, int rest) {
-		super(cons, fuer, dest, def, rest);
+	public Rata(int cons, int fuer, int dest, int def) {
+		super(cons, fuer, dest, def);
 		super.nombre="Rata";
 	}
 
@@ -28,7 +28,7 @@ public class Rata extends Enemigo{
 	 * @param p el personaje target
 	 */
 	public void ataqueRata(Personaje p) {
-		int dano=50+50*super.fuerza/50;
+		int dano=50+50*(fuerza + fuerzaExtra)/50;
 		p.recibeDano(dano);
 	}
 }
