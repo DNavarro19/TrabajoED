@@ -14,7 +14,7 @@ public class Cazador extends Personaje {
 		ene.recibeDano(dano);
 	}
 
-	public void puñalada(Enemigo ene) {
+	public void punalada(Enemigo ene) {
 		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
 		ene.recibeDano(dano * 2);
 	}
