@@ -10,20 +10,28 @@ public class Mago extends Personaje {
 	}
 
 	public void hechizo(Enemigo ene) {
-		int dano = 50 + 50 * fuerza / 100;
+		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
 		ene.recibeDano(dano);
 	}
 
 	public void bolaFuego(Enemigo ene) {
-		ene.recibeDano(getFuerza());
+		int dano = 100 + 100 * (fuerza + fuerzaExtra) / 100;
+		ene.recibeDano(dano);
 	}
 
-	public void nova(Enemigo ene) {
-		ene.recibeDano(getFuerza());
+	public void nova(Enemigo[] ene) {
+		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
+		for (int i = 0; i < ene.length; i++) {
+			ene[i].recibeDano(dano);
+		}
 	}
 
 	public void rafagaArcana(Enemigo ene) {
-		ene.recibeDano(getFuerza());
+		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
+		int rnd = (int) (Math.random() * 5 + 1);
+		for (int i = 0; i < rnd; i++) {
+			ene.recibeDano(dano);
+		}
 	}
 
 }

@@ -15,7 +15,7 @@ public class Monje extends Personaje {
 	}
 
 	public void posicionDefensa() {
-
+		esquiva = true;
 	}
 
 	public void comboKen(Enemigo ene, Enemigo ene2) {
@@ -25,7 +25,7 @@ public class Monje extends Personaje {
 	}
 
 	public void cabezazo(Enemigo ene) {
-		ene.
+		ene.setAturdido(true);
 	}
 
 }

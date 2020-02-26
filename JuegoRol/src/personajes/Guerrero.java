@@ -10,20 +10,24 @@ public class Guerrero extends Personaje {
 	}
 
 	public void espadazo(Enemigo ene) {
-		int dano = 50 + 50 * fuerza / 100;
+		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
 		ene.recibeDano(dano);
 	}
 
-	public void estocada(Enemigo ene) {
-		ene.recibeDano(getFuerza());
+	public void estocada(Enemigo ene, Enemigo ene2) {
+		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
+		ene.recibeDano(dano);
+		ene2.recibeDano(dano);
 	}
 
 	public void alzarEscudo(Enemigo ene) {
-		ene.recibeDano(getFuerza());
+		defensaExtra = 50;
 	}
 
 	public void carga(Enemigo ene) {
-		ene.recibeDano(getFuerza());
+		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
+		ene.recibeDano(dano);
+		ene.setAturdido(true);
 	}
 
 }

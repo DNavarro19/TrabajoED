@@ -15,15 +15,18 @@ public class Cazador extends Personaje {
 	}
 
 	public void puñalada(Enemigo ene) {
-		ene.recibeDano(getFuerza());
+		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
+		ene.recibeDano(dano * 2);
 	}
 
 	public void esquivar(Enemigo ene) {
-		ene.recibeDano(getFuerza());
+		esquiva = true;
 	}
 
-	public void disparoMultiple(Enemigo ene) {
-		ene.recibeDano(getFuerza());
+	public void disparoMultiple(Enemigo ene, Enemigo ene2) {
+		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
+		ene.recibeDano(dano);
+		ene2.recibeDano(dano);
 	}
 
 }
