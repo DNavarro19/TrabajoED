@@ -42,10 +42,8 @@ public class Objeto {
 	/**
 	 * metodo que muestra los atributos que cambia cada objeto
 	 */
-	public void describeObjetos() {
-		System.out.println("Amuleto:\n>aumenta el atributo en X puntos.\n>disminuye el atributo en X puntos");
-		System.out.println("Collar:\n>aumenta el atributo en X puntos.\n>disminuye el atributo en X puntos");
-		System.out.println("Anillo:\n>aumenta el atributo en X puntos.\n>disminuye el atributo en X puntos");
+	public String describeObjetos() {
+		return tipo + " aumenta en " + puntos + " puntos la " + caracteristica;
 	}
 
 }
