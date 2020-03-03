@@ -19,7 +19,7 @@ public class Cazador extends Personaje {
 		ene.recibeDano(dano * 2);
 	}
 
-	public void esquivar(Enemigo ene) {
+	public void esquivar() {
 		esquiva = true;
 	}
 
