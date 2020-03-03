@@ -24,13 +24,6 @@ public class Objeto {
 		}
 	}
 
-	/**
-	 * metodo que muestra el tipo de objeto
-	 */
-	public void muestraObjeto() {
-		System.out.println(this.tipo);
-	}
-
 	public int getPuntos() {
 		return puntos;
 	}

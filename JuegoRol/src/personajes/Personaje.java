@@ -35,7 +35,7 @@ public class Personaje {
 	 * Este metodo indica la cantidad numerica que va a restarse a la vida actual
 	 * del personaje
 	 * 
-	 * @param ataque cantidad de dno que va a recibir
+	 * @param ataque cantidad de dano que va a recibir
 	 * 
 	 */
 	public void recibeDano(int ataque) {
