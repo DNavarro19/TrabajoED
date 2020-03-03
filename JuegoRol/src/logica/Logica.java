@@ -1,5 +1,7 @@
 package logica;
 
+import menu.Menu;
+
 public class Logica {
 	/**
 	 * metodo que genera un numero aleatorio y en funcion de ese numero devuelve una
@@ -15,18 +17,23 @@ public class Logica {
 	 *         <li>si el numero esta entre 96-100 la situacion es de restauracion de
 	 *         vida</li>
 	 */
-	public String generaSituacion() {
+	public void generaSituacion() {
+		Menu m=new Menu();
 		double situacion = generaAleatorio();
 		if (situacion >= 1 && situacion <= 15) {
-			return "tesoro";
+			//tesoro
+			m.opcionesSala();
+			m.opcionesTesoro();
 		} else if (situacion > 15 && situacion <= 65) {
-			return "combate";
+			// combate
+			m.opcionesCombate();
 		} else if (situacion > 65 && situacion <= 85) {
-			return "tesoro+combate";
+		//	return "tesoro+combate";
 		} else if (situacion > 85 && situacion <= 95) {
-			return "trampa";
+			//return "trampa";
 		} else
-			return "vida";
+			System.out.println("");
+			//return "vida";
 
 	}
 

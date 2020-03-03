@@ -18,7 +18,7 @@ public class Menu {
 	 */
 	
 	public void muestraOpcion() {
-		Logica l=new Logica();
+		/*Logica l=new Logica();
 		switch(l.generaSituacion()) {
 		case "ataque":
 			//muestraOpcionesAtaque();
@@ -35,7 +35,7 @@ public class Menu {
 		case "tesoro+combate":
 			//en proceso
 			break;
-		}
+		}*/
 	}
 	public void opcionesSala() {
 		System.out.println("1)siguiente sala");
@@ -50,6 +50,9 @@ public class Menu {
 		System.out.println("2)anillo");
 		System.out.println("3)collar");
 		System.out.println("4)[MOSTRAR DETALLES DE LOS OBJETOS]");
+	}
+	public void opcionesCombate() {
+	
 	}
 	
 }
