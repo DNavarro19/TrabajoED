@@ -36,7 +36,7 @@ public class Logica {
 		} else
 			return "vida";
 			//return "vida";
-
+ 
 	}
 	/**
 	 * método que genera el numero aleatorio que se usa para elegir la situación
