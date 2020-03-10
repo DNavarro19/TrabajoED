@@ -1,6 +1,5 @@
 package enemigos;
 
-import personajes.Personaje;
 
 /**
  * Clase Hobgoblin, enemigo del piso 2

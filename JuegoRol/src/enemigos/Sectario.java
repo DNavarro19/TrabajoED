@@ -1,6 +1,5 @@
 package enemigos;
 
-import personajes.Personaje;
 
 /**
  * Clase Sectario, enemigo del piso 4
@@ -22,6 +21,11 @@ public class Sectario extends Enemigo{
 		super(cons, fuer, dest, def);
 		super.nombre="Sectario";
 		}
+	
+	/**
+	 * Metodo en el que el sectario cura a los enemigos
+	 * @param en el array de enemigos a los que va a curar
+	 */
 
 	public void ataqueSectario(Enemigo[] en) {
 		int cura = 50 + 50 * (fuerza + fuerzaExtra) / 100;

@@ -40,6 +40,41 @@ public class Enemigo {
 		aturdido=false;
 	}
 	/**
+	 * Metodo que devuelve la fuerza del enemigo
+ 	 * @return valor numerico de la fuerza del enemigo
+	 */
+	public int getFuerza() {
+		return fuerza;
+	}
+	/**
+	 * Metodo que devuelve la fuerza extra del enemigo
+ 	 * @return valor numerico de la fuerza extra del enemigo
+	 */
+	public int getFuerzaExtra() {
+		return fuerzaExtra;
+	}
+	/**
+	 * Metodo que devuelve la vida actual del enemigo
+	 * @return el valor numerico de la vida actual del enemigo
+	 */
+	public int getVidaActual() {
+		return vidaActual;
+	}
+	/**
+	 * Metodo que devuelve la defensa del enemigo
+	 * @return el valor numerico de la defensa del enemigo
+	 */
+	public int getDefensa() {
+		return defensa;
+	}
+	/**
+	 * Metodo que devuelve la defensa bonus del enemigo
+	 * @return el valor numerico de la defensa bonus del enemigo
+	 */
+	public int getDefensaExtra() {
+		return defensaExtra;
+	}
+	/**
 	 * Este metodo indica la cantidad numerica que va a restarse a la vida actual del enemigo
 	 * 
 	 * @param ataque cantidad de dano que va a recibir 
