@@ -27,5 +27,10 @@ public class Monje extends Personaje {
 	public void cabezazo(Enemigo ene) {
 		ene.setAturdido(true);
 	}
+	public void muestraAtaque() {
+		for (int i = 0; i < habilidades.length; i++) {
+			System.out.println(i+")"+habilidades[i]);
+		}
+	}
 
 }
