@@ -3,7 +3,7 @@ package personajes;
 import enemigos.Enemigo;
 
 public class Cazador extends Personaje {
-	private String[] habilidades = { "Disparo con arco", "Puñalada", "Esquivar", "Disparo multiple" };
+	private String[] habilidades = { "Disparo con arco", "Punalada", "Esquivar", "Disparo multiple" };
 
 	public Cazador() {
 		super(50, 50, 50, 50, 50);
@@ -27,6 +27,15 @@ public class Cazador extends Personaje {
 		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
 		ene.recibeDano(dano);
 		ene2.recibeDano(dano);
+	}
+	/**
+	 * metodo que muestra por pantalla los ataques del personajes
+	 */
+	@Override
+	public void muestraAtaque() {
+		for (int i = 0; i < habilidades.length; i++) {
+			System.out.println(i+")"+habilidades[i]);
+		}
 	}
 
 }

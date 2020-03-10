@@ -29,5 +29,14 @@ public class Clerigo extends Personaje {
 		int cura = 50 + 50 * (fuerza + fuerzaExtra) / 100;
 		p.recibeVida(cura);
 	}
+	/**
+	 * metodo que muestra por pantalla los ataques del personajes
+	 */
+	@Override
+	public void muestraAtaque() {
+		for (int i = 0; i < habilidades.length; i++) {
+			System.out.println(i+")"+habilidades[i]);
+		}
+	}
 
 }

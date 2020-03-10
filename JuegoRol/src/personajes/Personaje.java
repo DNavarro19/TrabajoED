@@ -222,5 +222,8 @@ public class Personaje {
 	public void anadeResistencia(int resistencia) {
 		this.resistencia += resistencia;
 	}
+	public void muestraAtaque() {
+		
+	}
 
 }

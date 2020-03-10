@@ -26,7 +26,7 @@ public class Logica {
 			m.opcionesTesoro();
 		} else if (situacion > 15 && situacion <= 65) {
 			// combate
-			m.opcionesCombate();
+			//anadir codigo para la situacion de combate
 		} else if (situacion > 65 && situacion <= 85) {
 		//	return "tesoro+combate";
 		} else if (situacion > 85 && situacion <= 95) {
@@ -36,7 +36,10 @@ public class Logica {
 			//return "vida";
 
 	}
-
+	/**
+	 * método que genera el numero aleatorio que se usa para elegir la situación
+	 * @return némero aleatorio entre 1-100
+	 */
 	private double generaAleatorio() {
 		return Math.random() * 100 + 1;
 	}
