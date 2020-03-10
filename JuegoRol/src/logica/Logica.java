@@ -17,22 +17,24 @@ public class Logica {
 	 *         <li>si el numero esta entre 96-100 la situacion es de restauracion de
 	 *         vida</li>
 	 */
-	public void generaSituacion() {
-		Menu m=new Menu();
+	public String generaSituacion() {
 		double situacion = generaAleatorio();
 		if (situacion >= 1 && situacion <= 15) {
 			//tesoro
-			m.opcionesSala();
-			m.opcionesTesoro();
+			return "tesoro";
 		} else if (situacion > 15 && situacion <= 65) {
 			// combate
+			return "combate";
 			//anadir codigo para la situacion de combate
 		} else if (situacion > 65 && situacion <= 85) {
 		//	return "tesoro+combate";
+			return "tesoro y combate";
 		} else if (situacion > 85 && situacion <= 95) {
 			//return "trampa";
+			return "trampa";
+			
 		} else
-			System.out.println("");
+			return "vida";
 			//return "vida";
 
 	}
