@@ -2,7 +2,7 @@ package personajes;
 
 import objetos.Objeto;
 
-public class Personaje {
+public abstract class Personaje {
 	protected int constitucion;
 	protected int fuerza;
 	protected int destreza;
@@ -222,8 +222,7 @@ public class Personaje {
 	public void anadeResistencia(int resistencia) {
 		this.resistencia += resistencia;
 	}
-	public void muestraAtaque() {
-		
-	}
+
+	public abstract void muestraAtaque();
 
 }
