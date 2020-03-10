@@ -178,5 +178,8 @@ public class Personaje {
 	public void setResistencia(int resistencia) {
 		this.resistencia += resistencia;
 	}
+	public void muestraAtaque() {
+		
+	}
 
 }

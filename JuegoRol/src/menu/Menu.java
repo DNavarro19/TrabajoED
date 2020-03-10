@@ -33,8 +33,8 @@ public class Menu {
 	/**
 	 * método que muestra los diferentes ataques disponible
 	 */
-	public void opcionesCombate() {
-	
+	public void opcionesCombate(Personaje p) {
+		p.muestraAtaque();
 	}
 	
 }
