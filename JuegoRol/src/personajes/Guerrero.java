@@ -29,6 +29,9 @@ public class Guerrero extends Personaje {
 		ene.recibeDano(dano);
 		ene.setAturdido(true);
 	}
+	/**
+	 * metodo que muestra por pantalla los ataques del personajes
+	 */
 	public void muestraAtaque() {
 		for (int i = 0; i < habilidades.length; i++) {
 			System.out.println(i+")"+habilidades[i]);
