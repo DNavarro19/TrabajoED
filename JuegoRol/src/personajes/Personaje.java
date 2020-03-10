@@ -49,8 +49,8 @@ public abstract class Personaje {
 	}
 
 	/**
-	 * Este metodo indica la cantidad numerica que va a restarse a la vida actual
-	 * del personaje
+	 * Este metodo resta una cantidad de dano a la vida actual del personaje
+	 * teniendo en cuenta la defensa de este
 	 * 
 	 * @param ataque Cantidad de dano que va a recibir el personaje
 	 * 
@@ -60,7 +60,9 @@ public abstract class Personaje {
 	}
 
 	/**
-	 * @param cura
+	 * Este metodo anade una cantidad de vida a la vida actual del personaje
+	 * 
+	 * @param cura Cantidad de vida que se va a recibir el personaje
 	 */
 	public void recibeVida(int cura) {
 		vidaActual += cura;
@@ -145,7 +147,7 @@ public abstract class Personaje {
 	/**
 	 * Metodo que modifica los atributos del personaje segun el objeto a utilizar
 	 * 
-	 * @param tipos el tipo de objeto que se quiere usar
+	 * @param obj El objeto a usar
 	 */
 	private void usaObjeto(Objeto obj) {
 		switch (obj.getCaracteristica()) {
@@ -223,6 +225,9 @@ public abstract class Personaje {
 		this.resistencia += resistencia;
 	}
 
+	/**
+	 * Muestra los ataques del personaje, los cuales se declaran en las clases hijas
+	 */
 	public abstract void muestraAtaque();
 
 }
