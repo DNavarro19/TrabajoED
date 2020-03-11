@@ -1,11 +1,10 @@
 package menu;
 
 import personajes.Personaje;
-import logica.Logica;
 
 public class Menu {
 	public Menu(){
-		
+		//Contructor vacío ya que esta clase no tiene atributos
 	}
 	/**
 	 * método que muestra las opciones de la sala

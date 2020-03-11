@@ -1,6 +1,5 @@
 package logica;
 
-import menu.Menu;
 
 public class Logica {
 	/**
@@ -20,26 +19,22 @@ public class Logica {
 	public String generaSituacion() {
 		double situacion = generaAleatorio();
 		if (situacion >= 1 && situacion <= 15) {
-			//tesoro
 			return "tesoro";
 		} else if (situacion > 15 && situacion <= 65) {
-			// combate
 			return "combate";
-			//anadir codigo para la situacion de combate
+			// anadir codigo para la situacion de combate
 		} else if (situacion > 65 && situacion <= 85) {
-		//	return "tesoro+combate";
 			return "tesoro y combate";
 		} else if (situacion > 85 && situacion <= 95) {
-			//return "trampa";
 			return "trampa";
-			
-		} else
+		} else {
 			return "vida";
-			//return "vida";
- 
+		}
 	}
+
 	/**
 	 * método que genera el numero aleatorio que se usa para elegir la situación
+	 * 
 	 * @return némero aleatorio entre 1-100
 	 */
 	private double generaAleatorio() {

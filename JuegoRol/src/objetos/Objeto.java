@@ -1,7 +1,5 @@
 package objetos;
 
-import personajes.Personaje;
-
 public class Objeto {
 	private String tipo;
 	private String caracteristica;
