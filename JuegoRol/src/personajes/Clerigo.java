@@ -9,11 +9,21 @@ public class Clerigo extends Personaje {
 		super(50, 50, 50, 50, 50);
 	}
 
+	/**
+	 * Metodo que golpea a un enemigo
+	 * 
+	 * @param ene Enemigo al que va dirigido el ataque
+	 */
 	public void ataqueBaston(Enemigo ene) {
 		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
 		ene.recibeDano(dano);
 	}
 
+	/**
+	 * Metodo que cura a todos los personajes
+	 * 
+	 * @param p El array de personajes que estan en juego
+	 */
 	public void olaSanacion(Personaje[] p) {
 		int cura = 25 + 25 * (fuerza + fuerzaExtra) / 100;
 		for (int i = 0; i < p.length; i++) {
@@ -21,21 +31,32 @@ public class Clerigo extends Personaje {
 		}
 	}
 
+	/**
+	 * Metodo que aumenta la fuerza de un personaje temporalmente
+	 * 
+	 * @param p Personaje al que va dirigido la habilidad
+	 */
 	public void manoBendita(Personaje p) {
 		p.fuerzaExtra = 25;
 	}
 
+	/**
+	 * Metodo que cura a un personaje
+	 * 
+	 * @param p Personaje al que va dirigido la habilidad
+	 */
 	public void curaMayor(Personaje p) {
 		int cura = 50 + 50 * (fuerza + fuerzaExtra) / 100;
 		p.recibeVida(cura);
 	}
+
 	/**
-	 * metodo que muestra por pantalla los ataques del personajes
+	 * Metodo que muestra por pantalla los ataques del personajes
 	 */
 	@Override
 	public void muestraAtaque() {
 		for (int i = 0; i < habilidades.length; i++) {
-			System.out.println(i+")"+habilidades[i]);
+			System.out.println(i + ")" + habilidades[i]);
 		}
 	}
 

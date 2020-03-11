@@ -41,6 +41,7 @@ public class Enemigo {
 	}
 	/**
 	 * Metodo que devuelve la fuerza del enemigo
+	 * 
  	 * @return valor numerico de la fuerza del enemigo
 	 */
 	public int getFuerza() {
@@ -48,6 +49,7 @@ public class Enemigo {
 	}
 	/**
 	 * Metodo que devuelve la fuerza extra del enemigo
+	 * 
  	 * @return valor numerico de la fuerza extra del enemigo
 	 */
 	public int getFuerzaExtra() {
@@ -55,6 +57,7 @@ public class Enemigo {
 	}
 	/**
 	 * Metodo que devuelve la vida actual del enemigo
+	 * 
 	 * @return el valor numerico de la vida actual del enemigo
 	 */
 	public int getVidaActual() {
@@ -62,6 +65,7 @@ public class Enemigo {
 	}
 	/**
 	 * Metodo que devuelve la defensa del enemigo
+	 * 
 	 * @return el valor numerico de la defensa del enemigo
 	 */
 	public int getDefensa() {
@@ -69,18 +73,47 @@ public class Enemigo {
 	}
 	/**
 	 * Metodo que devuelve la defensa bonus del enemigo
+	 * 
 	 * @return el valor numerico de la defensa bonus del enemigo
 	 */
 	public int getDefensaExtra() {
 		return defensaExtra;
 	}
+	
+	
+	/**
+	 * Metodo que da valor a la vida
+	 * 
+	 * @param vida la cantidad numerica de vida que va a tener el enemigo
+	 */
+	public void setVidaActual(int vida) {
+		this.vidaActual=vida;
+	}
+	
+	/**
+	 * Metodo que da valor a la fuerza extra
+	 * 
+	 * @param vida la cantidad numerica de fuerza extra que va a tener el enemigo
+	 */
+	public void setFuerzaExtra(int fExtra) {
+		this.fuerzaExtra=fExtra;
+	}
+	
+	/**
+	 * Metodo que da valor a la defensa extra
+	 * 
+	 * @param vida la cantidad numerica de defensa extra que va a tener el enemigo
+	 */
+	public void setDefensaExtra(int dExtra) {
+		this.defensaExtra=dExtra;
+	}
+	
 	/**
 	 * Este metodo indica la cantidad numerica que va a restarse a la vida actual del enemigo
 	 * 
 	 * @param ataque cantidad de dano que va a recibir 
 	 * 
 	 */
-	
 	public void recibeDano(int ataque) {
 		vidaActual-=(ataque-ataque*(defensa+defensaExtra)/100);
 	}
