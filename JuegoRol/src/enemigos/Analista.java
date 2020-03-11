@@ -29,7 +29,7 @@ public class Analista extends Enemigo{
 	public void ataqueAnalista(Personaje [] pjs) {
 		for (int i = 0; i < pjs.length; i++) {
 			pjs[i].setAturdido(true);
-			pjs[i].recibeDano(50+50*super.fuerza/100);
+			pjs[i].recibeDano(50+50*(super.fuerza+super.fuerzaExtra)/100);
 		}
 	}
 

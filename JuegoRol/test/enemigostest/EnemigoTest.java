@@ -1,4 +1,4 @@
-package enemigosTest;
+package enemigostest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -27,6 +27,7 @@ class EnemigoTest {
 		int dano=50+50*(enemy.getFuerza()+enemy.getFuerzaExtra())/100;
 		int actual=monk.getVidaActual();
 		int expected=monk.getConstitucion()-dano;
+		assertEquals(expected,actual,"La vida actual debe ser la constitucion menos el dano recibido");
 	}
 	
 	@Test
