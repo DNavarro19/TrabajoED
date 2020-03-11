@@ -37,7 +37,7 @@ public class Objeto {
 	}
 
 	/**
-	 * @return Devuelve la caracteristica que va a ser aumnetada
+	 * @return Devuelve la caracteristica que va a ser aumentada
 	 */
 	public String getCaracteristica() {
 		return caracteristica;

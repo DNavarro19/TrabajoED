@@ -66,6 +66,9 @@ public abstract class Personaje {
 	 */
 	public void recibeVida(int cura) {
 		vidaActual += cura;
+		if (vidaActual > constitucion) {
+			vidaActual = constitucion;
+		}
 	}
 
 	/**
