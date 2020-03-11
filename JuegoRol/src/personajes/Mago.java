@@ -1,5 +1,7 @@
 package personajes;
 
+import java.util.Random;
+
 import enemigos.Enemigo;
 
 public class Mago extends Personaje {
@@ -9,16 +11,31 @@ public class Mago extends Personaje {
 		super(50, 50, 50, 50, 50);
 	}
 
+	/**
+	 * Metodo que golpea a un enemigo
+	 * 
+	 * @param ene Enemigo al que va dirigido el ataque
+	 */
 	public void hechizo(Enemigo ene) {
 		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
 		ene.recibeDano(dano);
 	}
 
+	/**
+	 * Metodo que golpea a un enemigo haciendo mas daño de lo normal
+	 * 
+	 * @param ene Enemigo al que va dirigido el ataque
+	 */
 	public void bolaFuego(Enemigo ene) {
 		int dano = 100 + 100 * (fuerza + fuerzaExtra) / 100;
 		ene.recibeDano(dano);
 	}
 
+	/**
+	 * Metodo que golpea a todos los enemigos
+	 * 
+	 * @param ene Enemigo al que va dirigido el ataque
+	 */
 	public void nova(Enemigo[] ene) {
 		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
 		for (int i = 0; i < ene.length; i++) {
@@ -26,20 +43,27 @@ public class Mago extends Personaje {
 		}
 	}
 
+	/**
+	 * Metodo que golpea a un enemigo hasta 5 veces
+	 * 
+	 * @param ene Enemigo al que va dirigido el ataque
+	 */
 	public void rafagaArcana(Enemigo ene) {
 		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
-		int rnd = (int) (Math.random() * 5 + 1);
+		Random r = new Random();
+		int rnd = r.nextInt(4) + 1;
 		for (int i = 0; i < rnd; i++) {
 			ene.recibeDano(dano);
 		}
 	}
+
 	/**
-	 * metodo que muestra por pantalla los ataques del personajes
+	 * Metodo que muestra por pantalla los ataques del personajes
 	 */
 	@Override
 	public void muestraAtaque() {
 		for (int i = 0; i < habilidades.length; i++) {
-			System.out.println(i+")"+habilidades[i]);
+			System.out.println(i + ")" + habilidades[i]);
 		}
 	}
 }
