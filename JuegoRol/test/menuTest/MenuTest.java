@@ -29,6 +29,7 @@ class MenuTest {
 	    System.setOut(originalOut);
 	//    System.setErr(originalErr);
 	}
+	
 
 	@Test
 	void opcionesSalaTest() {

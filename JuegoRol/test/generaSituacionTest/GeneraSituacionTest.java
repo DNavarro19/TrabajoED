@@ -15,7 +15,7 @@ class GeneraSituacionTest {
 			if (expected[i].equalsIgnoreCase(actual)) {
 				assertEquals(expected[i], actual);
 			}
-		}
+		} 
 	}
 
 }
