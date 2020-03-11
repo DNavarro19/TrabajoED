@@ -129,6 +129,20 @@ public abstract class Personaje {
 	}
 
 	/**
+	 * @return Devuelve el valor de la defensa extra que tiene el personaje
+	 */
+	public int getDefensaExtra() {
+		return defensaExtra;
+	}
+
+	/**
+	 * @return Devuelve el valor de la fuerza extra que tiene el personaje
+	 */
+	public int getFuerzaExtra() {
+		return fuerzaExtra;
+	}
+
+	/**
 	 * <ul>
 	 * <li>Equipa el objeto en un array</li>
 	 * <li>No lo equipa porque el array esta lleno</li>
