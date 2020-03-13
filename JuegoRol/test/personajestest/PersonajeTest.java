@@ -5,6 +5,9 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import enemigos.Enemigo;
+import objetos.Caracteristica;
+import objetos.Objeto;
+import objetos.Tipo;
 import personajes.Cazador;
 
 class PersonajeTest {
@@ -45,4 +48,24 @@ class PersonajeTest {
 				"Anade una cantidad de vida a la vida actual cuando la vida actual sobrepasa la constitucion");
 	}
 
+	@Test
+	public void testUsaObjeto() {
+		Objeto item = new Objeto(Tipo.Amuleto, Caracteristica.Constitucion);
+		Cazador robin = new Cazador();
+		int expected = robin.getConstitucion() + item.getPuntos();
+		robin.usaObjeto(item);
+		int actual = robin.getConstitucion();
+		assertEquals(expected, actual, "Usa un objeto y anade sus puntos a la caracteristica correspondiente");
+	}
+
+	@Test
+	public void testEquipaObjeto() {
+		Objeto item = new Objeto(Tipo.Amuleto, Caracteristica.Constitucion);
+		Cazador robin = new Cazador();
+		Objeto[] expected = new Objeto[5];
+		expected[0] = item;
+		robin.equipaObjeto(item);
+		Objeto[] actual = robin.getObjetos();
+		assertArrayEquals(expected, actual, "Equipa un objeto a un personaje");
+	}
 }

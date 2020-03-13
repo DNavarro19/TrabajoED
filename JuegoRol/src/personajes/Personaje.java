@@ -166,7 +166,7 @@ public abstract class Personaje {
 	 * 
 	 * @param obj El objeto a usar
 	 */
-	private void usaObjeto(Objeto obj) {
+	public void usaObjeto(Objeto obj) {
 		switch (obj.getCaracteristica()) {
 		case Constitucion:
 			constitucion += obj.getPuntos();
