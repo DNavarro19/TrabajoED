@@ -26,7 +26,7 @@ class EnemigoTest {
 		enemy.ataqueBasico(monk);
 		int dano=50+50*(enemy.getFuerza()+enemy.getFuerzaExtra())/100;
 		int actual=monk.getVidaActual();
-		int expected=monk.getConstitucion()-dano;
+		int expected=monk.getConstitucion()-(dano-dano*(monk.getDefensa()+monk.getDefensaExtra())/100);
 		assertEquals(expected,actual,"La vida actual debe ser la constitucion menos el dano recibido");
 	}
 	
