@@ -1,8 +1,8 @@
 package objetos;
 
 public class Objeto {
-	private String tipo;
-	private String caracteristica;
+	private Tipo tipo;
+	private Caracteristica caracteristica;
 	private int puntos;
 
 	/**
@@ -11,17 +11,17 @@ public class Objeto {
 	 * 
 	 *               Los puntos se inicializan dependiendo del tipo de objeto que es
 	 */
-	public Objeto(String tipo, String caract) {
+	public Objeto(Tipo tipo, Caracteristica caract) {
 		this.tipo = tipo;
 		this.caracteristica = caract;
 		switch (tipo) {
-		case "amuleto":
+		case Amuleto:
 			puntos = 70;
 			break;
-		case "anillo":
+		case Anillo:
 			puntos = 40;
 			break;
-		case "collar":
+		case Collar:
 			puntos = 20;
 			break;
 		default:
@@ -39,7 +39,7 @@ public class Objeto {
 	/**
 	 * @return Devuelve la caracteristica que va a ser aumentada
 	 */
-	public String getCaracteristica() {
+	public Caracteristica getCaracteristica() {
 		return caracteristica;
 	}
 
