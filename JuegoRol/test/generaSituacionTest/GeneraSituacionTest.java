@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Test;
 
 class GeneraSituacionTest {
 
+	/**
+	 * test que comprueba que los resultados obtenidos por el método generaSituacion() coinciden con los resultados definidos
+	 */
 	@Test
 	void Situacion() {
 		String[] expected = { "tesoro", "combate", "tesoro y combate", "trampa", "vida" };
@@ -17,6 +20,10 @@ class GeneraSituacionTest {
 			}
 		} 
 	}
+	
+	/**
+	 * test que comprueba que la sala jefe aparece tras 10 rondas del juego
+	 */
 	@Test
 	void Jefe() {
 		String expected="jefe";

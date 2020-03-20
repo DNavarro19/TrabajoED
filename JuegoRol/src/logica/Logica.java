@@ -9,7 +9,7 @@ public class Logica {
 
 	// numero estático que se irá incrementando segun se avance por el juego para
 	// alcanzar al jefe final
-	public static int NumSalas = 0;
+	private static int NumSalas = 0;
 
 	/**
 	 * metodo que genera un numero aleatorio y en funcion de ese numero devuelve una
