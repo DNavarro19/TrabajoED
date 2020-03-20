@@ -17,5 +17,16 @@ class GeneraSituacionTest {
 			}
 		} 
 	}
+	@Test
+	void Jefe() {
+		String expected="jefe";
+		Logica target= new Logica();
+		String actual = null;
+		for (int i = 0; i < 10; i++) {
+			actual=target.generaSituacion();
+		}
+		assertEquals(expected, actual);
+				
+	}
 
 }
