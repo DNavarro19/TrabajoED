@@ -1,7 +1,11 @@
 package menu;
 
 import personajes.Personaje;
-
+/**
+ * 
+ * @author Pablo Meca Sanchez
+ *
+ */
 public class Menu {
 	public Menu(){
 		//Contructor vacío ya que esta clase no tiene atributos

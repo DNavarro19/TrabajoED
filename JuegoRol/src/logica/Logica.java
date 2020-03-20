@@ -1,6 +1,10 @@
 package logica;
 
-
+/**
+ * 
+ * @author Pablo Meca Sanchez 
+ *
+ */
 public class Logica {
 	/**
 	 * metodo que genera un numero aleatorio y en funcion de ese numero devuelve una
@@ -35,7 +39,7 @@ public class Logica {
 	/**
 	 * método que genera el numero aleatorio que se usa para elegir la situación
 	 * 
-	 * @return némero aleatorio entre 1-100
+	 * @return numero aleatorio entre 1-100
 	 */
 	private double generaAleatorio() {
 		return Math.random() * 100 + 1;
