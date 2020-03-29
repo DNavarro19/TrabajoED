@@ -18,8 +18,15 @@ class AnalistaTest {
 		Monje monk3= new Monje();
 		Monje monk4= new Monje();
 		Personaje [] pjs = {monk1,monk2,monk3,monk4};
+		int dano=50+50*(ana.getFuerza()+ana.getFuerzaExtra())/100;
+		ana.ataqueAnalista(pjs);
+		boolean bExpected=true;
 		for (int i = 0; i < pjs.length; i++) {
-			int expected=pjs[i].getConstitucion()-50+50*(ana.getFuerza()+ana.getFuerzaExtra())/100;
+			int expected=pjs[i].getConstitucion()-(dano - dano * (pjs[i].getDefensa() + pjs[i].getDefensaExtra()) / 100);
+			int actual=pjs[i].getVidaActual();
+			assertEquals(expected,actual,"La vida debe ser la misma");
+			boolean bActual=pjs[i].isAturdido();
+			assertEquals(bExpected,bActual,"Los personajes deben estar aturdidos");
 		}
 	}
 

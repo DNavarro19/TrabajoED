@@ -16,7 +16,7 @@ public class JefeProyecto extends Enemigo{
 	 * @param def valor que reduce la cantidad de dano recibido
 	 * @param res valor que define la cantidad de habilidades posibles a usar
 	 */
-	public JefeProyecto(int cons, int fuer, int dest, int def, int res) {
+	public JefeProyecto(int cons, int fuer, int dest, int def) {
 		super(cons, fuer, dest, def);
 		super.nombre="Gerente";	}
 
