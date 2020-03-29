@@ -247,4 +247,8 @@ public abstract class Personaje {
 	 */
 	public abstract void muestraAtaque();
 
+	public boolean isAturdido() {
+		return aturdido;
+	}
+
 }
