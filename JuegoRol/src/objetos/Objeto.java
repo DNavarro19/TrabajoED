@@ -1,5 +1,11 @@
 package objetos;
 
+/**
+ * Clase Objeto
+ * 
+ * @author David
+ *
+ */
 public class Objeto {
 	private Tipo tipo;
 	private Caracteristica caracteristica;

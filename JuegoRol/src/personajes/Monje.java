@@ -2,6 +2,12 @@ package personajes;
 
 import enemigos.Enemigo;
 
+/**
+ * Clase Monje
+ * 
+ * @author David
+ *
+ */
 public class Monje extends Personaje {
 	private String[] habilidades = { "Golpe con vara", "Posicion de defensa", "Combo Ken", "Cabezazo" };
 
@@ -54,7 +60,7 @@ public class Monje extends Personaje {
 	@Override
 	public void muestraAtaque() {
 		for (int i = 0; i < habilidades.length; i++) {
-			System.out.println(i + ")" + habilidades[i]);
+			System.out.println((i + 1) + ")" + habilidades[i]);
 		}
 	}
 

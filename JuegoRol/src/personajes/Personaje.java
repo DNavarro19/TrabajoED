@@ -2,6 +2,12 @@ package personajes;
 
 import objetos.Objeto;
 
+/**
+ * Clase abstracta Personaje
+ * 
+ * @author David
+ *
+ */
 public abstract class Personaje {
 	protected int constitucion;
 	protected int fuerza;
@@ -46,6 +52,10 @@ public abstract class Personaje {
 		fuerzaExtra = 0;
 		aturdido = false;
 		esquiva = false;
+	}
+
+	public boolean isEsquiva() {
+		return esquiva;
 	}
 
 	/**

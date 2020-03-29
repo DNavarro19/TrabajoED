@@ -2,6 +2,12 @@ package personajes;
 
 import enemigos.Enemigo;
 
+/**
+ * Clase Guerrero
+ * 
+ * @author David
+ *
+ */
 public class Guerrero extends Personaje {
 	private String[] habilidades = { "Espadazo", "Estocada", "Alzar Escudo", "Carga" };
 
@@ -55,7 +61,7 @@ public class Guerrero extends Personaje {
 	@Override
 	public void muestraAtaque() {
 		for (int i = 0; i < habilidades.length; i++) {
-			System.out.println(i + ")" + habilidades[i]);
+			System.out.println((i + 1) + ")" + habilidades[i]);
 		}
 	}
 

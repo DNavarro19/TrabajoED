@@ -2,8 +2,14 @@ package personajes;
 
 import enemigos.Enemigo;
 
+/**
+ * Clase Clerigo
+ * 
+ * @author David
+ *
+ */
 public class Clerigo extends Personaje {
-	private String[] habilidades = { "Ataque con baston", "Ola de Sanacion", "Mano bendita", "Cura Mayor" };
+	private String[] habilidades = { "Ataque con baston", "Ola de Sanacion", "Mano Bendita", "Cura Mayor" };
 
 	public Clerigo() {
 		super(50, 50, 50, 50, 50);
@@ -56,7 +62,7 @@ public class Clerigo extends Personaje {
 	@Override
 	public void muestraAtaque() {
 		for (int i = 0; i < habilidades.length; i++) {
-			System.out.println(i + ")" + habilidades[i]);
+			System.out.println((i + 1) + ")" + habilidades[i]);
 		}
 	}
 

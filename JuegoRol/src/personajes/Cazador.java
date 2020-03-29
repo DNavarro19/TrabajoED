@@ -2,6 +2,12 @@ package personajes;
 
 import enemigos.Enemigo;
 
+/**
+ * Clase Cazador
+ * 
+ * @author David
+ *
+ */
 public class Cazador extends Personaje {
 	private String[] habilidades = { "Disparo con arco", "Punalada", "Esquivar", "Disparo multiple" };
 
@@ -15,12 +21,12 @@ public class Cazador extends Personaje {
 	 * @param ene Enemigo al que va dirigido el ataque
 	 */
 	public void disparoArco(Enemigo ene) {
-		int dano = 50 + 50 * fuerza / 100;
+		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
 		ene.recibeDano(dano);
 	}
 
 	/**
-	 * Metodo que golpea a un enemigo haciendo siempre el doble de daño
+	 * Metodo que golpea a un enemigo haciendo siempre el doble de dano
 	 * 
 	 * @param ene Enemigo al que va dirigido el ataque
 	 */
@@ -30,7 +36,7 @@ public class Cazador extends Personaje {
 	}
 
 	/**
-	 * Metodo que establece la esquiva a true, y este personaje esquivará el
+	 * Metodo que establece la esquiva a true, y este personaje esquivara el
 	 * siguiente ataque
 	 */
 	public void esquivar() {
@@ -55,7 +61,7 @@ public class Cazador extends Personaje {
 	@Override
 	public void muestraAtaque() {
 		for (int i = 0; i < habilidades.length; i++) {
-			System.out.println(i + ")" + habilidades[i]);
+			System.out.println((i + 1) + ")" + habilidades[i]);
 		}
 	}
 

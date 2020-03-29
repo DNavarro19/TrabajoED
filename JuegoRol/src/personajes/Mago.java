@@ -4,6 +4,12 @@ import java.util.Random;
 
 import enemigos.Enemigo;
 
+/**
+ * Clase Mago
+ * 
+ * @author David
+ *
+ */
 public class Mago extends Personaje {
 	private String[] habilidades = { "Hechizo", "Bola de fuego", "Nova", "Rafaga Arcana" };
 
@@ -34,7 +40,7 @@ public class Mago extends Personaje {
 	/**
 	 * Metodo que golpea a todos los enemigos
 	 * 
-	 * @param ene Enemigo al que va dirigido el ataque
+	 * @param ene Enemigos a los que va dirigido el ataque
 	 */
 	public void nova(Enemigo[] ene) {
 		int dano = 50 + 50 * (fuerza + fuerzaExtra) / 100;
@@ -63,7 +69,7 @@ public class Mago extends Personaje {
 	@Override
 	public void muestraAtaque() {
 		for (int i = 0; i < habilidades.length; i++) {
-			System.out.println(i + ")" + habilidades[i]);
+			System.out.println((i + 1) + ")" + habilidades[i]);
 		}
 	}
 }
