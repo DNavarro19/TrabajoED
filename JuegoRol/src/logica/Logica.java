@@ -13,7 +13,8 @@ public class Logica {
 
 	/**
 	 * metodo que genera un numero aleatorio y en funcion de ese numero devuelve una
-	 * situacion
+	 * situacion. También incrementa el valor de la variable NumSalas, que es un contador
+	 * usado para saber cuantas salas llevas recorridas.
 	 * 
 	 * @return
 	 *         <ul>
