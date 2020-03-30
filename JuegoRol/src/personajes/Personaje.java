@@ -54,6 +54,9 @@ public abstract class Personaje {
 		esquiva = false;
 	}
 
+	/**
+	 * @return Devuelve el valor de la esquiva del personaje
+	 */
 	public boolean isEsquiva() {
 		return esquiva;
 	}
@@ -86,6 +89,28 @@ public abstract class Personaje {
 	 */
 	public int getConstitucion() {
 		return constitucion;
+	}
+
+	/**
+	 * Resetea el valor de la defensa y fuerza extra a 0
+	 */
+	public void reset() {
+		defensaExtra = 0;
+		fuerzaExtra = 0;
+	}
+
+	/**
+	 * @param fuerzaExtra Cambia el valor de fuerza extra
+	 */
+	public void setFuerzaExtra(int fuerzaExtra) {
+		this.fuerzaExtra = fuerzaExtra;
+	}
+
+	/**
+	 * @param defensaExtra Cambia el valor de defensa extra
+	 */
+	public void setDefensaExtra(int defensaExtra) {
+		this.defensaExtra = defensaExtra;
 	}
 
 	/**
@@ -257,6 +282,9 @@ public abstract class Personaje {
 	 */
 	public abstract void muestraAtaque();
 
+	/**
+	 * @return Devuelve el valor de aturdido que tiene el personaje
+	 */
 	public boolean isAturdido() {
 		return aturdido;
 	}
