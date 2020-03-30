@@ -16,7 +16,6 @@ public class Fantasma extends Enemigo{
 	 * @param fuer valor que se utiliza como bonus al dano
 	 * @param dest valor que define el turno 
 	 * @param def valor que reduce la cantidad de dano recibido
-	 * @param res valor que define la cantidad de habilidades posibles a usar
 	 */
 	public Fantasma(int cons, int fuer, int dest, int def) {
 		super(cons, fuer, dest, def);
