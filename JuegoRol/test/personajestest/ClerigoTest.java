@@ -15,6 +15,12 @@ import personajes.Clerigo;
 import personajes.Guerrero;
 import personajes.Personaje;
 
+/**
+ * Pruebas que comprueban cada habilidad del cazador
+ * 
+ * @author David
+ *
+ */
 class ClerigoTest {
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	private static final PrintStream originalOut = System.out;

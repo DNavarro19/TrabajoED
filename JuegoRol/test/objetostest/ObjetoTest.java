@@ -8,6 +8,12 @@ import objetos.Caracteristica;
 import objetos.Objeto;
 import objetos.Tipo;
 
+/**
+ * Pruebas que comprueban que el objeto se crea y se describe correctamente
+ * 
+ * @author David
+ *
+ */
 class ObjetoTest {
 
 	@Test

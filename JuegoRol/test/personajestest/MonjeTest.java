@@ -12,6 +12,12 @@ import org.junit.jupiter.api.Test;
 import enemigos.Analista;
 import personajes.Monje;
 
+/**
+ * Pruebas que comprueban cada habilidad del cazador
+ * 
+ * @author David
+ *
+ */
 class MonjeTest {
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	private static final PrintStream originalOut = System.out;

@@ -13,6 +13,12 @@ import enemigos.Analista;
 import enemigos.Enemigo;
 import personajes.Mago;
 
+/**
+ * Pruebas que comprueban cada habilidad del cazador
+ * 
+ * @author David
+ *
+ */
 class MagoTest {
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	private static final PrintStream originalOut = System.out;

@@ -10,6 +10,13 @@ import objetos.Objeto;
 import objetos.Tipo;
 import personajes.Cazador;
 
+/**
+ * Pruebas que comprueban que el personaje recibe dano y vida, que usa y equipa
+ * objetos y que resetea los atributos extra correctamente
+ * 
+ * @author David
+ *
+ */
 class PersonajeTest {
 
 	@Test

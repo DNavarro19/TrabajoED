@@ -12,6 +12,12 @@ import org.junit.jupiter.api.Test;
 import enemigos.Analista;
 import personajes.Cazador;
 
+/**
+ * Pruebas que comprueban cada habilidad del cazador
+ * 
+ * @author David
+ *
+ */
 class CazadorTest {
 
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
