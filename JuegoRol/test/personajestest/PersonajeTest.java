@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import enemigos.Enemigo;
 import objetos.Caracteristica;
 import objetos.Objeto;
 import objetos.Tipo;
@@ -66,5 +67,19 @@ class PersonajeTest {
 		robin.equipaObjeto(item);
 		Objeto[] actual = robin.getObjetos();
 		assertArrayEquals(expected, actual, "Equipa un objeto a un personaje");
+	}
+
+	@Test
+	public void testReset() {
+		Cazador robin = new Cazador();
+		robin.setFuerzaExtra(50);
+		robin.setDefensaExtra(50);
+		robin.reset();
+		int fActual = robin.getFuerzaExtra();
+		int dActual = robin.getDefensaExtra();
+		int fExpected = 0;
+		int dExpected = 0;
+		assertEquals(fExpected, fActual, "La fuerza extra debe estar a 0");
+		assertEquals(dExpected, dActual, "La defensa extra debe estar a 0");
 	}
 }
