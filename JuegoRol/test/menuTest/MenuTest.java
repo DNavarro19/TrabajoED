@@ -16,28 +16,23 @@ import menu.Menu;
 class MenuTest {
 
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-	private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
 	private final PrintStream originalOut = System.out;
-	private final PrintStream originalErr = System.err;
 
 	@BeforeEach
 	public void setUpStreams() {
-	    System.setOut(new PrintStream(outContent));
-	    System.setErr(new PrintStream(errContent));
+		System.setOut(new PrintStream(outContent));
 	}
 
 	@AfterEach
 	public void restoreStreams() {
-	    System.setOut(originalOut);
-	//    System.setErr(originalErr);
+		System.setOut(originalOut);
 	}
-	
 
 	@Test
 	void opcionesSalaTest() {
-		 Menu target=new Menu();
-		 target.opcionesSala();
-		 assertEquals("1)siguiente sala\n2)mostrar vida", outContent.toString());
+		Menu target = new Menu();
+		target.opcionesSala();
+		assertEquals("1)siguiente sala\r\n" + "2)mostrar vida\r\n" + "", outContent.toString());
 	}
- 
+
 }
