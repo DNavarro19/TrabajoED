@@ -28,25 +28,36 @@ class MenuTest {
 	public void restoreStreams() {
 		System.setOut(originalOut);
 	}
-
+/**
+ * Test que comprueba que aparecen las opciones de la sala normal.
+ */
 	@Test
 	void opcionesSalaTest() {
 		Menu target = new Menu();
 		target.opcionesSala();
 		assertEquals("\n1)siguiente sala\n2)mostrar vida", outContent.toString());
 	}
+	/**
+	 * Test que comprueba que aparecen las opciones de la sala con el tesoro.
+	 */
 	@Test 
 	void opcionesTesoroTest() {
 		Menu target =new Menu();
 		target.opcionesTesoro();
 		assertEquals("\n4)abrir tesoro",outContent.toString());
 	}
+	/**
+	 * Test que comprueba que aparecen los diferentes objetos por pantalla.
+	 */
 	@Test
 	void eligeObjetoTest() {
 		Menu target =new Menu();
 		target.eligeObjeto();
 		assertEquals("1)amuleto\n" + "2)anillo\n" + "3)collar\n" + "4)[MOSTRAR DETALLES DE LOS OBJETOS]",outContent.toString());
 	}
+	/**
+	 * Test que comprueba que aparecen los ataques del cazador.
+	 */
 	@Test
 	void muestraCombateTestCazador() {
 		Menu target = new Menu();
@@ -55,6 +66,9 @@ class MenuTest {
 		assertEquals("1)Disparo con arco\r\n" + "2)Punalada\r\n" + "3)Esquivar\r\n" + "4)Disparo multiple\r\n",
 				outContent.toString());
 	}
+	/**
+	 * Test que comprueba que aparecen los ataques del clérigo.
+	 */
 	@Test
 	void muestraCombateTestClerigo() {
 		Menu target = new Menu();
@@ -63,6 +77,9 @@ class MenuTest {
 		assertEquals("1)Ataque con baston\r\n" + "2)Ola de Sanacion\r\n" + "3)Mano Bendita\r\n" + "4)Cura Mayor\r\n",
 				outContent.toString());
 	}
+	/**
+	 * Test que comprueba que aparecen los ataques del guerrero.
+	 */
 	@Test
 	void muestraCombateTestGuerrero() {
 		Menu target = new Menu();
@@ -71,6 +88,9 @@ class MenuTest {
 		assertEquals("1)Espadazo\r\n" + "2)Estocada\r\n" + "3)Alzar Escudo\r\n" + "4)Carga\r\n", outContent.toString());
 		
 	}
+	/**
+	 * Test que comprueba que aparecen los ataques del mago.
+	 */
 	@Test
 	void muestraCombateTestMago() {
 		Menu target = new Menu();
@@ -79,6 +99,9 @@ class MenuTest {
 		assertEquals("1)Hechizo\r\n" + "2)Bola de fuego\r\n" + "3)Nova\r\n" + "4)Rafaga Arcana\r\n",
 				outContent.toString());
 	}
+	/**
+	 * Test que comprueba que aparecen los ataques del monje.
+	 */
 	@Test
 	void muestraCombateTestMonje() {
 		Menu target = new Menu();
