@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import enemigos.Enemigo;
 import objetos.Caracteristica;
 import objetos.Objeto;
 import objetos.Tipo;
@@ -50,7 +49,7 @@ class PersonajeTest {
 
 	@Test
 	public void testUsaObjeto() {
-		Objeto item = new Objeto(Tipo.Amuleto, Caracteristica.Constitucion);
+		Objeto item = new Objeto(Tipo.AMULETO, Caracteristica.CONSTITUCION);
 		Cazador robin = new Cazador();
 		int expected = robin.getConstitucion() + item.getPuntos();
 		robin.usaObjeto(item);
@@ -60,7 +59,7 @@ class PersonajeTest {
 
 	@Test
 	public void testEquipaObjeto() {
-		Objeto item = new Objeto(Tipo.Amuleto, Caracteristica.Constitucion);
+		Objeto item = new Objeto(Tipo.AMULETO, Caracteristica.CONSTITUCION);
 		Cazador robin = new Cazador();
 		Objeto[] expected = new Objeto[5];
 		expected[0] = item;

@@ -10,12 +10,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import enemigos.Analista;
-import personajes.Cazador;
 import personajes.Monje;
 
 class MonjeTest {
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-	private final PrintStream originalOut = System.out;
+	private static final PrintStream originalOut = System.out;
 
 	@BeforeEach
 	public void setUpStreams() {

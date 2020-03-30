@@ -178,19 +178,19 @@ public abstract class Personaje {
 	 */
 	public void usaObjeto(Objeto obj) {
 		switch (obj.getCaracteristica()) {
-		case Constitucion:
+		case CONSTITUCION:
 			constitucion += obj.getPuntos();
 			break;
-		case Defensa:
+		case DEFENSA:
 			defensa += obj.getPuntos();
 			break;
-		case Destreza:
+		case DESTREZA:
 			destreza += obj.getPuntos();
 			break;
-		case Fuerza:
+		case FUERZA:
 			fuerza += obj.getPuntos();
 			break;
-		case Resistencia:
+		case RESISTENCIA:
 			resistencia += obj.getPuntos();
 			break;
 		default:
