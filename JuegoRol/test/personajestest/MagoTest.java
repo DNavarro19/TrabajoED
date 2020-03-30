@@ -66,7 +66,18 @@ class MagoTest {
 
 	@Test
 	public void rafagaArcanaTest() {
-
+		Mago m = new Mago();
+		Analista ene = new Analista(50, 50, 50, 50);
+		int dano = 50 + 50 * (m.getFuerza() + m.getFuerzaExtra()) / 100;
+		int expected = ene.getConstitucion();
+		m.rafagaArcana(ene);
+		int actual = ene.getVidaActual();
+		for (int i = 0; i < 5; i++) {
+			expected -= (dano - dano * (ene.getDefensa() + ene.getDefensaExtra()) / 100);
+			if (expected == actual) {
+				assertEquals(expected, actual, "Comprueba que se hace el daño correctamente");
+			}
+		}
 	}
 
 	@Test

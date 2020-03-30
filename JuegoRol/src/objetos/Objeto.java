@@ -36,7 +36,7 @@ public class Objeto {
 	}
 
 	/**
-	 * @return Devuelve los puntos que se van a añadir a x caracteristica
+	 * @return Devuelve los puntos que se van a anadir a x caracteristica
 	 */
 	public int getPuntos() {
 		return puntos;
@@ -52,7 +52,7 @@ public class Objeto {
 	/**
 	 * Metodo que muestra los atributos que cambia cada objeto
 	 */
-	public String describeObjetos() {
+	public String describeObjeto() {
 		return tipo + " aumenta en " + puntos + " puntos la " + caracteristica;
 	}
 
