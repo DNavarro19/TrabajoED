@@ -1,42 +1,44 @@
 package menu;
 
 import personajes.Personaje;
+
 /**
  * 
  * @author Pablo Meca Sanchez
  *
  */
 public class Menu {
-	public Menu(){
-		//Contructor vacío ya que esta clase no tiene atributos
+	public Menu() {
+		// Contructor vacío ya que esta clase no tiene atributos
 	}
+
 	/**
 	 * método que muestra las opciones de la sala
 	 */
-	
+
 	public void opcionesSala() {
-		System.out.println("1)siguiente sala\n2)mostrar vida"); 
+		System.out.print("\n1)siguiente sala\n2)mostrar vida");
 	}
+
 	/**
 	 * método que muestra las opciones del tesoro
 	 */
 	public void opcionesTesoro() {
-		System.out.println("4)abrir tesoro");
+		System.out.print("\n4)abrir tesoro");
 	}
+
 	/**
-	 *método que muestra los objetos a elegir	
+	 * método que muestra los objetos a elegir
 	 */
 	public void eligeObjeto() {
-		System.out.println("1)amuleto");
-		System.out.println("2)anillo");
-		System.out.println("3)collar");
-		System.out.println("4)[MOSTRAR DETALLES DE LOS OBJETOS]");
+		System.out.print("1)amuleto\n" + "2)anillo\n" + "3)collar\n" + "4)[MOSTRAR DETALLES DE LOS OBJETOS]");
 	}
+
 	/**
 	 * método que muestra los diferentes ataques disponible
 	 */
 	public void opcionesCombate(Personaje p) {
 		p.muestraAtaque();
 	}
-	
+
 }
