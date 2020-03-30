@@ -17,7 +17,7 @@ import personajes.Personaje;
 
 class ClerigoTest {
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-	private final PrintStream originalOut = System.out;
+	private static final PrintStream originalOut = System.out;
 
 	@BeforeEach
 	public void setUpStreams() {
@@ -72,7 +72,6 @@ class ClerigoTest {
 		Clerigo c = new Clerigo();
 		Cazador robin = new Cazador();
 		int dano = 100;
-		int cura = 50 + 50 * (c.getFuerza() + c.getFuerzaExtra()) / 100;
 		robin.recibeDano(dano);
 		int expected = robin.getConstitucion();
 		c.curaMayor(robin);

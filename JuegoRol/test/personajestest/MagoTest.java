@@ -11,12 +11,11 @@ import org.junit.jupiter.api.Test;
 
 import enemigos.Analista;
 import enemigos.Enemigo;
-import personajes.Cazador;
 import personajes.Mago;
 
 class MagoTest {
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-	private final PrintStream originalOut = System.out;
+	private static final PrintStream originalOut = System.out;
 
 	@BeforeEach
 	public void setUpStreams() {

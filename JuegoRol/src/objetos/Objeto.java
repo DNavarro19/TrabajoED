@@ -21,13 +21,13 @@ public class Objeto {
 		this.tipo = tipo;
 		this.caracteristica = caract;
 		switch (tipo) {
-		case Amuleto:
+		case AMULETO:
 			puntos = 70;
 			break;
-		case Anillo:
+		case ANILLO:
 			puntos = 40;
 			break;
-		case Collar:
+		case COLLAR:
 			puntos = 20;
 			break;
 		default:

@@ -7,5 +7,5 @@ package objetos;
  *
  */
 public enum Tipo {
-	Collar, Amuleto, Anillo;
+	COLLAR, AMULETO, ANILLO;
 }
