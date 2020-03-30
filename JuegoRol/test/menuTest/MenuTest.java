@@ -45,39 +45,46 @@ class MenuTest {
 	void eligeObjetoTest() {
 		Menu target =new Menu();
 		target.eligeObjeto();
-		assertEquals("\n1)amuleto\n" + "2)anillo\n" + "3)collar\n" + "4)[MOSTRAR DETALLES DE LOS OBJETOS]",outContent.toString());
+		assertEquals("1)amuleto\n" + "2)anillo\n" + "3)collar\n" + "4)[MOSTRAR DETALLES DE LOS OBJETOS]",outContent.toString());
 	}
 	@Test
 	void muestraCombateTestCazador() {
 		Menu target = new Menu();
 		Personaje Cazadaor=new Cazador();
 		target.opcionesCombate(Cazadaor);
-		assertEquals("1)Disparo con arco\n"+"2)Punalada\n"+"3)Esquivar\n"+"4)Disparo multiple",outContent.toString());
+		assertEquals("1)Disparo con arco\r\n" + "2)Punalada\r\n" + "3)Esquivar\r\n" + "4)Disparo multiple\r\n",
+				outContent.toString());
 	}
+	@Test
 	void muestraCombateTestClerigo() {
 		Menu target = new Menu();
 		Personaje Clerigo=new Clerigo();
 		target.opcionesCombate(Clerigo);
-		assertEquals("1)Ataque con baston\n"+"2)Ola de Sanacion\n"+"3)Mano Bendita\n"+"4)Cura Mayor",outContent.toString());
+		assertEquals("1)Ataque con baston\r\n" + "2)Ola de Sanacion\r\n" + "3)Mano Bendita\r\n" + "4)Cura Mayor\r\n",
+				outContent.toString());
 	}
+	@Test
 	void muestraCombateTestGuerrero() {
 		Menu target = new Menu();
 		Personaje Guerrero=new Guerrero();
 		target.opcionesCombate(Guerrero);
-		assertEquals("1)Espadazo\n"+"2)Estocada\n"+"3)Alzar Escudo\n"+"4)Carga",outContent.toString());
+		assertEquals("1)Espadazo\r\n" + "2)Estocada\r\n" + "3)Alzar Escudo\r\n" + "4)Carga\r\n", outContent.toString());
+		
 	}
+	@Test
 	void muestraCombateTestMago() {
 		Menu target = new Menu();
 		Personaje Mago=new Mago();
 		target.opcionesCombate(Mago);
-		assertEquals("1)Hechizo\n"+"2)Bola de fuego\n"+"3)Nova\n"+"4)Rafaga Arcana",outContent.toString());
+		assertEquals("1)Hechizo\r\n" + "2)Bola de fuego\r\n" + "3)Nova\r\n" + "4)Rafaga Arcana\r\n",
+				outContent.toString());
 	}
+	@Test
 	void muestraCombateTestMonje() {
 		Menu target = new Menu();
-		Personaje Monje=new Mago();
+		Personaje Monje=new Monje();
 		target.opcionesCombate(Monje);
-		assertEquals("1)Golpe con vara\n"+"2)Posicion de defensa\n"+"3)Combo Ken\n"+"4)Cabezazo",outContent.toString());
-	}
+		assertEquals("1)Golpe con vara\r\n" + "2)Posicion de defensa\r\n" + "3)Combo Ken\r\n" + "4)Cabezazo\r\n",
+				outContent.toString());}
 	
-	//"Golpe con vara", "Posicion de defensa", "Combo Ken", "Cabezazo" };
 }
