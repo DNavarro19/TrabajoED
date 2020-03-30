@@ -39,5 +39,5 @@ class MenuTest {
 		 target.opcionesSala();
 		 assertEquals("1)siguiente sala\n2)mostrar vida", outContent.toString());
 	}
-
+ 
 }

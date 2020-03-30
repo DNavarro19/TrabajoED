@@ -15,7 +15,7 @@ public class Menu {
 	 */
 	
 	public void opcionesSala() {
-		System.out.println("1)siguiente sala\n2)mostrar vida");
+		System.out.println("1)siguiente sala\n2)mostrar vida"); 
 	}
 	/**
 	 * método que muestra las opciones del tesoro
